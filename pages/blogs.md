@@ -1,6 +1,7 @@
 ---
 layout: blogs
-title: "Blogs"
+title: Blogs
+permalink: /blogs/
 ---
 
 <section class="blogs">

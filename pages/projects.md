@@ -1,6 +1,7 @@
 ---
 layout: projects
-title: "Projects"
+title: Projects
+permalink: /projects/
 ---
 
 <section class="projects">

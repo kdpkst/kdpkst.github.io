@@ -7,7 +7,7 @@ collections:
   posts:
     output: true
 
-permalink: /:categories/:title/
+# permalink: /:categories/:title/
 
 # Navigation
 nav:
