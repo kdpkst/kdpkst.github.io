@@ -1,0 +1,29 @@
+title: "My Personal Website"
+description: "A cyberpunk/hacker style personal website built with Jekyll."
+baseurl: ""
+url: "https://yourusername.github.io"
+
+collections:
+  posts:
+    output: true
+
+permalink: /:categories/:title/
+
+# Navigation
+nav:
+  - name: "About"
+    url: "/"
+  - name: "Projects"
+    url: "/projects"
+  - name: "Blogs"
+    url: "/blogs"
+
+# Markdown and plugins
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# GitHub Pages
+github:
+  is_project_page: true

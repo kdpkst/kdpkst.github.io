@@ -1,0 +1,136 @@
+body {
+  background: #18181a;
+  color: #e0e0e0;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  transition: background 0.3s, color 0.3s;
+}
+body.light-mode {
+  background: #f5f5fa;
+  color: #232323;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #232336;
+  border-bottom: 2px solid #00ffe7;
+}
+body.light-mode .navbar {
+  background: #fff;
+  border-bottom: 2px solid #ff00c8;
+}
+.navbar a {
+  color: #00ffe7;
+  text-decoration: none;
+  margin-right: 1.5rem;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+body.light-mode .navbar a {
+  color: #ff00c8;
+}
+.navbar a:last-child {
+  margin-right: 0;
+}
+#mode-toggle {
+  background: none;
+  border: 2px solid #00ffe7;
+  color: #00ffe7;
+  border-radius: 50%;
+  padding: 0.5rem 0.7rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: border 0.2s, color 0.2s;
+}
+body.light-mode #mode-toggle {
+  border: 2px solid #ff00c8;
+  color: #ff00c8;
+}
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(30, 30, 40, 0.95);
+  border-radius: 1.2rem;
+  box-shadow: 0 0 24px #00ffe7a0;
+}
+body.light-mode main {
+  background: #fff;
+  box-shadow: 0 0 24px #ff00c880;
+}
+.project-list, .blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+.project-card, .blog-card {
+  background: #232336;
+  border: 2px solid #00ffe7;
+  border-radius: 1rem;
+  padding: 1.2rem;
+  transition: background 0.2s, border 0.2s;
+  box-shadow: 0 0 12px #00ffe7a0;
+}
+body.light-mode .project-card, body.light-mode .blog-card {
+  background: #fff;
+  border: 2px solid #ff00c8;
+  box-shadow: 0 0 12px #ff00c880;
+}
+.project-card h2, .blog-card h2 {
+  margin-top: 0;
+  color: #00ffe7;
+}
+body.light-mode .project-card h2, body.light-mode .blog-card h2 {
+  color: #ff00c8;
+}
+.project-card a, .blog-card a {
+  color: #00ffe7;
+  text-decoration: underline;
+}
+body.light-mode .project-card a, body.light-mode .blog-card a {
+  color: #ff00c8;
+}
+input#blog-search {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid #00ffe7;
+  background: #18181a;
+  color: #e0e0e0;
+  font-size: 1rem;
+  transition: border 0.2s, background 0.2s;
+}
+body.light-mode input#blog-search {
+  border: 2px solid #ff00c8;
+  background: #fff;
+  color: #232323;
+}
+.category {
+  display: inline-block;
+  margin: 0 0.5rem 1rem 0;
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+  background: #00ffe7;
+  color: #232336;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+body.light-mode .category {
+  background: #ff00c8;
+  color: #fff;
+}
+.self-portrait {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #00ffe7;
+  margin-bottom: 1.5rem;
+  object-fit: cover;
+}
+body.light-mode .self-portrait {
+  border: 3px solid #ff00c8;
+} 
