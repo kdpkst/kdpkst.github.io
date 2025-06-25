@@ -7,11 +7,9 @@ collections:
   posts:
     output: true
 
-# permalink: /:categories/:title/
-
 # Navigation
 nav:
-  - name: "About"
+  - name: "About Me"
     url: "/"
   - name: "Projects"
     url: "/projects"
