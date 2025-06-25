@@ -1,2 +1,1 @@
-# kdpkst.github.io
-My Personal Page
+# My personal page
