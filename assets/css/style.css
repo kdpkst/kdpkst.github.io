@@ -1,4 +1,10 @@
+html, body {
+  height: 100%;
+}
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: #18181a;
   color: #e0e0e0;
   font-family: 'Fira Mono', 'Consolas', monospace;
@@ -26,6 +32,8 @@ body.light-mode .navbar {
   margin-right: 1.5rem;
   font-weight: bold;
   transition: color 0.2s;
+  position: relative;
+  overflow: hidden;
 }
 body.light-mode .navbar a {
   color: #ff00c8;
@@ -48,16 +56,33 @@ body.light-mode #mode-toggle {
   color: #ff00c8;
 }
 main {
-  max-width: 900px;
+  max-width: 1000px;
+  width: 95vw;
   margin: 2rem auto;
   padding: 2rem;
   background: rgba(30, 30, 40, 0.95);
   border-radius: 1.2rem;
   box-shadow: 0 0 24px #00ffe7a0;
+  position: relative;
+  z-index: 1;
+  border: 3px solid;
+  border-image: linear-gradient(90deg, #00ffe7, #ff00c8, #00ffe7) 1;
+  animation: border-anim 4s linear infinite;
+  flex: 1 0 auto;
 }
 body.light-mode main {
   background: #fff;
   box-shadow: 0 0 24px #ff00c880;
+  border-image: linear-gradient(90deg, #ffb347, #00ffe7, #ffb347) 1;
+  animation: border-anim-light 4s linear infinite;
+}
+@keyframes border-anim {
+  0% { border-image-source: linear-gradient(90deg, #00ffe7, #ff00c8, #00ffe7); }
+  100% { border-image-source: linear-gradient(270deg, #00ffe7, #ff00c8, #00ffe7); }
+}
+@keyframes border-anim-light {
+  0% { border-image-source: linear-gradient(90deg, #ffb347, #00ffe7, #ffb347); }
+  100% { border-image-source: linear-gradient(270deg, #ffb347, #00ffe7, #ffb347); }
 }
 .project-list, .blog-list {
   display: grid;
@@ -69,7 +94,7 @@ body.light-mode main {
   border: 2px solid #00ffe7;
   border-radius: 1rem;
   padding: 1.2rem;
-  transition: background 0.2s, border 0.2s;
+  transition: background 0.2s, border 0.2s, transform 0.2s, box-shadow 0.2s;
   box-shadow: 0 0 12px #00ffe7a0;
 }
 body.light-mode .project-card, body.light-mode .blog-card {
@@ -80,9 +105,13 @@ body.light-mode .project-card, body.light-mode .blog-card {
 .project-card h2, .blog-card h2 {
   margin-top: 0;
   color: #00ffe7;
+  text-shadow: 0 0 8px #00ffe7, 0 0 16px #ff00c8;
+  position: relative;
+  z-index: 1;
 }
 body.light-mode .project-card h2, body.light-mode .blog-card h2 {
   color: #ff00c8;
+  text-shadow: 0 0 8px #ff00c8, 0 0 16px #00ffe7;
 }
 .project-card a, .blog-card a {
   color: #00ffe7;
@@ -181,23 +210,20 @@ body.light-mode .self-portrait {
   box-shadow: 0 0 24px #ff00c8;
 }
 
-/* Footer */
+/* Footer - More Compact and Sticky */
 .site-footer {
   background: #232336;
   color: #00ffe7;
   text-align: center;
-  padding: 2rem 1rem 1rem 1rem;
-  margin-top: 3rem;
+  padding: 0.7rem 1rem 0.5rem 1rem;
+  margin-top: 2rem;
   border-top: 2px solid #00ffe7;
-}
-.site-footer a {
-  color: #ff00c8;
-  text-decoration: underline;
+  flex-shrink: 0;
 }
 .site-footer .footer-content {
   display: flex;
   flex-direction: column;
-  gap: 0.7rem;
+  gap: 0.3rem;
   align-items: center;
 }
 body.light-mode .site-footer {
@@ -207,4 +233,67 @@ body.light-mode .site-footer {
 }
 body.light-mode .site-footer a {
   color: #00ffe7;
+}
+
+/* Subtle Animated Background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(120deg, #00ffe733 0 2px, transparent 2px 40px), repeating-linear-gradient(60deg, #ff00c833 0 2px, transparent 2px 40px);
+  opacity: 0.12;
+  animation: bg-move 12s linear infinite;
+}
+@keyframes bg-move {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 80px 160px, 160px 80px; }
+}
+
+/* Neon Glow for Section Headings */
+h2, h3 {
+  color: #00ffe7;
+  text-shadow: 0 0 8px #00ffe7, 0 0 16px #ff00c8;
+  position: relative;
+  z-index: 1;
+}
+body.light-mode h2, body.light-mode h3 {
+  color: #ff00c8;
+  text-shadow: 0 0 8px #ff00c8, 0 0 16px #00ffe7;
+}
+
+/* Card Hover Effects */
+.project-card:hover, .blog-card:hover {
+  transform: translateY(-8px) scale(1.03) rotate(-1deg);
+  box-shadow: 0 0 32px #00ffe7cc, 0 0 48px #ff00c8cc;
+  border-color: #ff00c8;
+}
+body.light-mode .project-card:hover, body.light-mode .blog-card:hover {
+  box-shadow: 0 0 32px #ff00c8cc, 0 0 48px #00ffe7cc;
+  border-color: #00ffe7;
+}
+
+/* Animated Nav Underline */
+.navbar a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0; bottom: -2px;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, #00ffe7, #ff00c8);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1);
+  z-index: 2;
+}
+.navbar a:hover::after, .navbar a:focus::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 700px) {
+  main {
+    max-width: 98vw;
+    padding: 1rem;
+  }
 } 
