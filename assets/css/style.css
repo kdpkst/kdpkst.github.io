@@ -18,8 +18,9 @@ body.light-mode {
 }
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  position: relative;
   padding: 1rem 2rem;
   background: #232336;
   border-bottom: 2px solid #00ffe7;
@@ -217,7 +218,8 @@ body.light-mode .self-portrait {
   background: #232336;
   color: #00ffe7;
   text-align: center;
-  padding: 0.7rem 1rem 0.5rem 1rem;
+  padding-top: 1.2rem;
+  padding-bottom: 0.3rem;
   margin-top: 2rem;
   border-top: 2px solid #00ffe7;
   flex-shrink: 0;
@@ -225,7 +227,7 @@ body.light-mode .self-portrait {
 .site-footer .footer-content {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.2rem;
   align-items: center;
 }
 body.light-mode .site-footer {
@@ -292,6 +294,13 @@ body.light-mode .project-card:hover, body.light-mode .blog-card:hover {
 .navbar a:hover::after, .navbar a:focus::after {
   transform: scaleX(1);
 }
+
+.nav-left {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
 
 @media (max-width: 700px) {
   main {
