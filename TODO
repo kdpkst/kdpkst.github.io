@@ -1,0 +1,3 @@
+enlarge and beautify the font in navbar
+low performance when displaying the background images (use a default image for each page, but add a left arrow at page left, right arrow at page right. when user clicks, change background image)
+split css files

@@ -213,7 +213,8 @@ body.light-mode .self-portrait {
   box-shadow: 0 0 24px #ff00c8;
 }
 
-/* Footer - More Compact and Sticky */
+
+/* Footer - Compact and Sticky */
 .site-footer {
   background: rgba(35, 35, 54, 0.85);
   color: #00ffe7;
@@ -239,21 +240,6 @@ body.light-mode .site-footer a {
   color: #00ffe7;
 }
 
-/* Subtle Animated Background */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  z-index: 0;
-  pointer-events: none;
-  background: repeating-linear-gradient(120deg, #00ffe733 0 2px, transparent 2px 40px), repeating-linear-gradient(60deg, #ff00c833 0 2px, transparent 2px 40px);
-  opacity: 0.12;
-  animation: bg-move 12s linear infinite;
-}
-@keyframes bg-move {
-  0% { background-position: 0 0, 0 0; }
-  100% { background-position: 80px 160px, 160px 80px; }
-}
 
 /* Neon Glow for Section Headings */
 h2, h3 {
@@ -300,6 +286,7 @@ body.light-mode .project-card:hover, body.light-mode .blog-card:hover {
   justify-content: center;
   flex: 1;
 }
+
 
 
 @media (max-width: 700px) {
