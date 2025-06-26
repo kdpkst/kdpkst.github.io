@@ -22,11 +22,11 @@ body.light-mode {
   align-items: center;
   position: relative;
   padding: 1rem 2rem;
-  background: #232336;
+  background: rgba(35, 35, 54, 0.85);
   border-bottom: 2px solid #00ffe7;
 }
 body.light-mode .navbar {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.85);
   border-bottom: 2px solid #ff00c8;
 }
 .navbar a {
@@ -63,7 +63,7 @@ main {
   width: 95vw;
   margin: 2rem auto;
   padding: 2rem;
-  background: rgba(30, 30, 40, 0.95);
+  background: rgba(30, 30, 40, 0.85);
   border-radius: 1.2rem;
   box-shadow: 0 0 24px #00ffe7a0;
   position: relative;
@@ -74,7 +74,7 @@ main {
   flex: 1 0 auto;
 }
 body.light-mode main {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.85);
   box-shadow: 0 0 24px #ff00c880;
   border-image: linear-gradient(90deg, #ffb347, #00ffe7, #ffb347) 1;
   animation: border-anim-light 4s linear infinite;
@@ -215,7 +215,7 @@ body.light-mode .self-portrait {
 
 /* Footer - More Compact and Sticky */
 .site-footer {
-  background: #232336;
+  background: rgba(35, 35, 54, 0.85);
   color: #00ffe7;
   text-align: center;
   padding-top: 1.2rem;
@@ -231,7 +231,7 @@ body.light-mode .self-portrait {
   align-items: center;
 }
 body.light-mode .site-footer {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.85);
   color: #ff00c8;
   border-top: 2px solid #ff00c8;
 }
