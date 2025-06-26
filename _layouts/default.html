@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title | default: site.title }}</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <script defer src="/assets/js/toggle.js"></script>
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <script defer src="{{ "/assets/js/toggle.js" | relative_url }}"></script>
   <link rel="icon" type="image/x-icon" href="{{ "/favicon.ico" | relative_url }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/images/favicon/apple-touch-icon.png" | relative_url }}">
   <link rel="icon" type="image/png" sizes="192x192" href="{{ "/assets/images/favicon/android-chrome-192x192.png" | relative_url }}">

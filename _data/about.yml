@@ -1,0 +1,19 @@
+self_introduction: "Hello! I'm Jax, a passionate developer..."
+education:
+  - degree: "B.Sc. in Computer Science"
+    school: "XJTLU"
+    year: "2020-2024"
+  - degree: "M.Sc. in IT"
+    school: "UoA"
+    year: "2025"
+experience:
+  - title: "English Teacher"
+    company: "New Oriental"
+    years: "2024-2025"
+  - title: "Reasearch Fellow"
+    company: "XJTLU"
+    years: "2020–2021"
+hobbies:
+  - "Bodybuilding"
+  - "Cooking"
+  - "Reading"

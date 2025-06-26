@@ -1,8 +1,8 @@
 <nav class="navbar">
   <div class="nav-left">
-    <a href="/">About</a>
-    <a href="/projects">Projects</a>
-    <a href="/blogs">Blogs</a>
+    <a href="{{ "/" | relative_url }}">About</a>
+    <a href="{{ "/projects" | relative_url }}">Projects</a>
+    <a href="{{ "/blogs" | relative_url }}">Blogs</a>
   </div>
   <div class="nav-right">
     <button id="mode-toggle" aria-label="Toggle dark/light mode">🌓</button>
