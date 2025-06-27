@@ -231,6 +231,10 @@ body.light-mode .self-portrait {
   gap: 0.2rem;
   align-items: center;
 }
+.site-footer a {
+  color: inherit;
+  text-decoration: underline;
+}
 body.light-mode .site-footer {
   background: rgba(255, 255, 255, 0.85);
   color: #ff00c8;
