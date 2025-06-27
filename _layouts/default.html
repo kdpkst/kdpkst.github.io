@@ -9,7 +9,7 @@
   <script>
     window.siteBaseUrl = "{{ site.baseurl }}";
   </script>
-  <script defer src="{{ '/assets/js/background.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/background-nav.js' | relative_url }}"></script>
   <script defer src="{{ "/assets/js/toggle.js" | relative_url }}"></script>
 
   <link rel="icon" type="image/x-icon" href="{{ "/favicon.ico" | relative_url }}">
@@ -21,6 +21,7 @@
 </head>
 <body class="dark-mode">
   {% include navbar.html %}
+  {% include background-nav.html %}
   <main>
     {{ content }}
   </main>

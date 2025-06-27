@@ -288,10 +288,89 @@ body.light-mode .project-card:hover, body.light-mode .blog-card:hover {
 }
 
 
+/* Background Navigation */
+.background-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  pointer-events: none;
+  width: 100%;
+  height: 0;
+}
+
+.bg-nav-btn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(35, 35, 54, 0.8);
+  color: #00ffe7;
+  border: 2px solid #00ffe7;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 16px #00ffe7;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-nav-btn:hover {
+  background: #ff00c8;
+  color: #fff;
+  border-color: #ff00c8;
+  box-shadow: 0 0 24px #ff00c8;
+  transform: translateY(-50%) scale(1.1);
+}
+
+#bg-prev {
+  left: 1rem;
+  position: fixed !important;
+}
+
+#bg-next {
+  right: 1rem;
+  position: fixed !important;
+}
+
+/* Background Overlay for Smooth Transitions */
+.bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+/* Light mode adjustments */
+body.light-mode .bg-nav-btn {
+  background: rgba(255, 255, 255, 0.8);
+  color: #ff00c8;
+  border-color: #ff00c8;
+  box-shadow: 0 0 16px #ff00c8;
+}
+
+body.light-mode .bg-nav-btn:hover {
+  background: #00ffe7;
+  color: #232336;
+  border-color: #00ffe7;
+  box-shadow: 0 0 24px #00ffe7;
+} 
+
 
 @media (max-width: 700px) {
   main {
     max-width: 98vw;
     padding: 1rem;
   }
-} 
+}
