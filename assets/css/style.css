@@ -299,44 +299,69 @@ body.light-mode .project-card:hover, body.light-mode .blog-card:hover {
   height: 0;
 }
 
+
+/* Background Navigation Buttons */
 .bg-nav-btn {
+  background: none;
+  border: none;
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(35, 35, 54, 0.8);
-  color: #00ffe7;
-  border: 2px solid #00ffe7;
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
+  background: rgba(20, 20, 30, 0.7); 
+  width: 3.5rem; 
+  height: 3.5rem;
+
   font-size: 1.5rem;
   cursor: pointer;
   pointer-events: auto;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 16px #00ffe7;
-  z-index: 1001;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 0 16px #00ffe7, 0 0 32px #ff00c8;
+  z-index: 1001;
+  transition: all 0.3s cubic-bezier(.4,2,.6,1);
+  animation: cyberpunk-pulse 1.5s infinite alternate;
+  overflow: hidden;
 }
-
+.bg-nav-btn svg {
+  display: block;
+  filter: drop-shadow(0 0 8px #00ffe7) drop-shadow(0 0 16px #ff00c8);
+}
 .bg-nav-btn:hover {
   background: #ff00c8;
-  color: #fff;
-  border-color: #ff00c8;
-  box-shadow: 0 0 24px #ff00c8;
-  transform: translateY(-50%) scale(1.1);
+  border-image: linear-gradient(135deg, #ff00c8, #00ffe7, #ff00c8) 1;
+  box-shadow: 0 0 32px #ff00c8, 0 0 48px #00ffe7;
+  animation: cyberpunk-pulse-fast 0.7s infinite alternate;
 }
-
+@keyframes cyberpunk-pulse {
+  0% { box-shadow: 0 0 16px #00ffe7, 0 0 32px #ff00c8; }
+  100% { box-shadow: 0 0 32px #ff00c8, 0 0 48px #00ffe7; }
+}
+@keyframes cyberpunk-pulse-fast {
+  0% { box-shadow: 0 0 32px #ff00c8, 0 0 48px #00ffe7; }
+  100% { box-shadow: 0 0 48px #00ffe7, 0 0 64px #ff00c8; }
+}
 #bg-prev {
   left: 1rem;
   position: fixed !important;
+  border-radius: 82% 18% 18% 82% / 50% 50% 50% 50%;
 }
-
 #bg-next {
   right: 1rem;
   position: fixed !important;
+  border-radius: 18% 82% 82% 18% / 50% 50% 50% 50%;
 }
+body.light-mode .bg-nav-btn {
+  background: rgba(255, 255, 255, 0.7);
+  border-image: linear-gradient(135deg, #ff00c8, #00ffe7, #ff00c8) 1;
+  box-shadow: 0 0 16px #ff00c8, 0 0 32px #00ffe7;
+}
+body.light-mode .bg-nav-btn:hover {
+  background: #00ffe7;
+  border-image: linear-gradient(135deg, #00ffe7, #ff00c8, #00ffe7) 1;
+  box-shadow: 0 0 32px #00ffe7, 0 0 48px #ff00c8;
+}
+
 
 /* Background Overlay for Smooth Transitions */
 .bg-overlay {
@@ -351,22 +376,6 @@ body.light-mode .project-card:hover, body.light-mode .blog-card:hover {
   transition: opacity 0.4s ease;
   pointer-events: none;
 }
-
-/* Light mode adjustments */
-body.light-mode .bg-nav-btn {
-  background: rgba(255, 255, 255, 0.8);
-  color: #ff00c8;
-  border-color: #ff00c8;
-  box-shadow: 0 0 16px #ff00c8;
-}
-
-body.light-mode .bg-nav-btn:hover {
-  background: #00ffe7;
-  color: #232336;
-  border-color: #00ffe7;
-  box-shadow: 0 0 24px #00ffe7;
-} 
-
 
 @media (max-width: 700px) {
   main {
