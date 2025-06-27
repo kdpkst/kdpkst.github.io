@@ -328,9 +328,9 @@ body.light-mode .project-card:hover, body.light-mode .blog-card:hover {
   filter: drop-shadow(0 0 8px #00ffe7) drop-shadow(0 0 16px #ff00c8);
 }
 .bg-nav-btn:hover {
-  background: #ff00c8;
-  border-image: linear-gradient(135deg, #ff00c8, #00ffe7, #ff00c8) 1;
-  box-shadow: 0 0 32px #ff00c8, 0 0 48px #00ffe7;
+  background: #00ffe7;
+  border-image: linear-gradient(135deg, #00ffe7, #ff00c8, #00ffe7) 1;
+  box-shadow: 0 0 16px #00ffe7, 0 0 24px #ff00c8;
   animation: cyberpunk-pulse-fast 0.7s infinite alternate;
 }
 @keyframes cyberpunk-pulse {
