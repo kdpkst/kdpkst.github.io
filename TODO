@@ -1,7 +1,9 @@
 when in "about me" page, the "about me" in the navbar should have some effects for notify user they are in about me 
+split css from the only one style.css file
+remove light mode for now
 enlarge and beautify the font in navbar
 background.js hardcode issue 
-split css from the only one style.css file
+
 
 
 modular improvement: start from About Me

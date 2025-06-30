@@ -12,10 +12,6 @@ body {
   font-family: 'Fira Mono', 'Consolas', monospace;
   transition: background 0.3s, color 0.3s;
 }
-body.light-mode {
-  background: #f5f5fa;
-  color: #232323;
-}
 .navbar {
   display: flex;
   justify-content: center;
@@ -25,10 +21,6 @@ body.light-mode {
   background: rgba(35, 35, 54, 0.85);
   border-bottom: 2px solid #00ffe7;
 }
-body.light-mode .navbar {
-  background: rgba(255, 255, 255, 0.85);
-  border-bottom: 2px solid #ff00c8;
-}
 .navbar a {
   color: #00ffe7;
   text-decoration: none;
@@ -37,9 +29,6 @@ body.light-mode .navbar {
   transition: color 0.2s;
   position: relative;
   overflow: hidden;
-}
-body.light-mode .navbar a {
-  color: #ff00c8;
 }
 .navbar a:last-child {
   margin-right: 0;
@@ -53,10 +42,6 @@ body.light-mode .navbar a {
   font-size: 1.2rem;
   cursor: pointer;
   transition: border 0.2s, color 0.2s;
-}
-body.light-mode #mode-toggle {
-  border: 2px solid #ff00c8;
-  color: #ff00c8;
 }
 main {
   max-width: 1000px;
@@ -73,12 +58,6 @@ main {
   animation: border-anim 4s linear infinite;
   flex: 1 0 auto;
 }
-body.light-mode main {
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 0 24px #ff00c880;
-  border-image: linear-gradient(90deg, #ffb347, #00ffe7, #ffb347) 1;
-  animation: border-anim-light 4s linear infinite;
-}
 @keyframes border-anim {
   0% { border-image-source: linear-gradient(90deg, #00ffe7, #ff00c8, #00ffe7); }
   100% { border-image-source: linear-gradient(270deg, #00ffe7, #ff00c8, #00ffe7); }
@@ -87,6 +66,8 @@ body.light-mode main {
   0% { border-image-source: linear-gradient(90deg, #ffb347, #00ffe7, #ffb347); }
   100% { border-image-source: linear-gradient(270deg, #ffb347, #00ffe7, #ffb347); }
 }
+
+
 .project-list, .blog-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -100,11 +81,6 @@ body.light-mode main {
   transition: background 0.2s, border 0.2s, transform 0.2s, box-shadow 0.2s;
   box-shadow: 0 0 12px #00ffe7a0;
 }
-body.light-mode .project-card, body.light-mode .blog-card {
-  background: #fff;
-  border: 2px solid #ff00c8;
-  box-shadow: 0 0 12px #ff00c880;
-}
 .project-card h2, .blog-card h2 {
   margin-top: 0;
   color: #00ffe7;
@@ -112,16 +88,9 @@ body.light-mode .project-card, body.light-mode .blog-card {
   position: relative;
   z-index: 1;
 }
-body.light-mode .project-card h2, body.light-mode .blog-card h2 {
-  color: #ff00c8;
-  text-shadow: 0 0 8px #ff00c8, 0 0 16px #00ffe7;
-}
 .project-card a, .blog-card a {
   color: #00ffe7;
   text-decoration: underline;
-}
-body.light-mode .project-card a, body.light-mode .blog-card a {
-  color: #ff00c8;
 }
 input#blog-search {
   width: 100%;
@@ -133,11 +102,6 @@ input#blog-search {
   color: #e0e0e0;
   font-size: 1rem;
   transition: border 0.2s, background 0.2s;
-}
-body.light-mode input#blog-search {
-  border: 2px solid #ff00c8;
-  background: #fff;
-  color: #232323;
 }
 .category {
   display: inline-block;
@@ -151,10 +115,6 @@ body.light-mode input#blog-search {
   text-decoration: none;
   transition: background 0.2s, color 0.2s;
 }
-body.light-mode .category {
-  background: #ff00c8;
-  color: #fff;
-}
 .self-portrait {
   width: 120px;
   height: 120px;
@@ -162,9 +122,6 @@ body.light-mode .category {
   border: 3px solid #00ffe7;
   margin-bottom: 1.5rem;
   object-fit: cover;
-}
-body.light-mode .self-portrait {
-  border: 3px solid #ff00c8;
 }
 
 
@@ -235,14 +192,6 @@ body.light-mode .self-portrait {
   color: inherit;
   text-decoration: underline;
 }
-body.light-mode .site-footer {
-  background: rgba(255, 255, 255, 0.85);
-  color: #ff00c8;
-  border-top: 2px solid #ff00c8;
-}
-body.light-mode .site-footer a {
-  color: #00ffe7;
-}
 
 
 /* Neon Glow for Section Headings */
@@ -252,10 +201,7 @@ h2, h3 {
   position: relative;
   z-index: 1;
 }
-body.light-mode h2, body.light-mode h3 {
-  color: #ff00c8;
-  text-shadow: 0 0 8px #ff00c8, 0 0 16px #00ffe7;
-}
+
 
 /* Card Hover Effects */
 .project-card:hover, .blog-card:hover {
@@ -263,10 +209,7 @@ body.light-mode h2, body.light-mode h3 {
   box-shadow: 0 0 32px #00ffe7cc, 0 0 48px #ff00c8cc;
   border-color: #ff00c8;
 }
-body.light-mode .project-card:hover, body.light-mode .blog-card:hover {
-  box-shadow: 0 0 32px #ff00c8cc, 0 0 48px #00ffe7cc;
-  border-color: #00ffe7;
-}
+
 
 /* Animated Nav Underline */
 .navbar a::after {
@@ -354,16 +297,6 @@ body.light-mode .project-card:hover, body.light-mode .blog-card:hover {
   right: 1rem;
   position: fixed !important;
   border-radius: 18% 82% 82% 18% / 50% 50% 50% 50%;
-}
-body.light-mode .bg-nav-btn {
-  background: rgba(255, 255, 255, 0.7);
-  border-image: linear-gradient(135deg, #ff00c8, #00ffe7, #ff00c8) 1;
-  box-shadow: 0 0 16px #ff00c8, 0 0 32px #00ffe7;
-}
-body.light-mode .bg-nav-btn:hover {
-  background: #00ffe7;
-  border-image: linear-gradient(135deg, #00ffe7, #ff00c8, #00ffe7) 1;
-  box-shadow: 0 0 32px #00ffe7, 0 0 48px #ff00c8;
 }
 
 
