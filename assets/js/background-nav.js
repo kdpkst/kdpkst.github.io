@@ -54,20 +54,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 400);
   }
   
-  // Event listeners
-  document.getElementById('bg-prev').addEventListener('click', function() {
+  // Background navigation (navbar buttons)
+  document.getElementById('bg-prev-nav').addEventListener('click', function() {
     changeBackground('prev');
   });
   
-  document.getElementById('bg-next').addEventListener('click', function() {
+  document.getElementById('bg-next-nav').addEventListener('click', function() {
     changeBackground('next');
   });
   
-  // Keyboard navigation
+  // Keyboard navigation for background
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'ArrowLeft') {
+    if (e.key === 'b' || e.key === 'B') {
       changeBackground('prev');
-    } else if (e.key === 'ArrowRight') {
+    } else if (e.key === 'n' || e.key === 'N') {
       changeBackground('next');
     }
   });
