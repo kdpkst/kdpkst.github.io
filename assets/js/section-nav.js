@@ -25,11 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   // Page navigation (side arrows)
-  document.getElementById('bg-prev').addEventListener('click', function() {
+  document.getElementById('section-prev').addEventListener('click', function() {
     navigatePage('prev');
   });
   
-  document.getElementById('bg-next').addEventListener('click', function() {
+  document.getElementById('section-next').addEventListener('click', function() {
     navigatePage('next');
   });
   
