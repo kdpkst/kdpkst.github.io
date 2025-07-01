@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     base + '/assets/images/background/bg1.webp',
     base + '/assets/images/background/bg2.webp',
     base + '/assets/images/background/bg3.webp',
-    base + '/assets/images/background/bg4.webp'
+    base + '/assets/images/background/bg4.webp',
+    base + '/assets/images/background/bg5.webp',
+    base + '/assets/images/background/bg6.webp'
   ];
   
   // Get saved background index or default to 0
