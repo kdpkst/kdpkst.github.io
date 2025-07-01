@@ -1,11 +1,43 @@
 <nav class="navbar">
+  <div class="nav-bg-left">
+    <button id="bg-prev-nav" class="bg-nav-btn" title="Previous background">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
+        <polyline points="14,4 6,10 14,16" stroke="#00ffe7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <polyline points="14,4 6,10 14,16" stroke="#ff00c8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+        <defs>
+          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+      </svg>
+      <span>Previous Background</span>
+    </button>
+  </div>
   <div class="nav-center">
     <a href="{{ "/" | relative_url }}">About</a>
     <a href="{{ "/projects" | relative_url }}">Projects</a>
     <a href="{{ "/blogs" | relative_url }}">Blogs</a>
   </div>
-  <div class="nav-right">
-    <button id="bg-prev-nav" class="bg-nav-btn" title="Previous background">◀</button>
-    <button id="bg-next-nav" class="bg-nav-btn" title="Next background">▶</button>
+  <div class="nav-bg-right">
+    <button id="bg-next-nav" class="bg-nav-btn" title="Next background">
+      <span>Next Background</span>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
+        <polyline points="6,4 14,10 6,16" stroke="#00ffe7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <polyline points="6,4 14,10 6,16" stroke="#ff00c8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+        <defs>
+          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+      </svg>
+    </button>
   </div>
 </nav> 

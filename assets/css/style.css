@@ -82,36 +82,47 @@ main {
 .navbar a:hover::after, .navbar a:focus::after {
   transform: scaleX(1);
 }
+.nav-bg-left, .nav-bg-right {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
 .nav-center {
+  flex: 1 1 auto;
   display: flex;
   justify-content: center;
-  flex: 1;
-}
-.nav-right {
-  display: flex;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 2rem;
 }
 /* Background Nav Buttons */
 .bg-nav-btn {
-  background: none;
-  border: 2px solid #00ffe7;
-  color: #00ffe7;
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  font-size: 0.8rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 8px #00ffe7;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(20, 20, 30, 0.7);
+  border: 2px solid #00ffe7;
+  color: #00ffe7;
+  border-radius: 2rem;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.4rem 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 0 8px #00ffe7, 0 0 16px #ff00c8;
+  transition: all 0.2s cubic-bezier(.4,2,.6,1);
+  text-shadow: 0 0 4px #00ffe7, 0 0 8px #ff00c8;
+  outline: none;
+}
+.bg-nav-btn svg {
+  display: inline-block;
+  filter: drop-shadow(0 0 4px #00ffe7) drop-shadow(0 0 8px #ff00c8);
 }
 .bg-nav-btn:hover {
   background: #ff00c8;
   color: #fff;
   border-color: #ff00c8;
-  box-shadow: 0 0 12px #ff00c8;
+  box-shadow: 0 0 16px #ff00c8, 0 0 24px #00ffe7;
+  text-shadow: 0 0 8px #ff00c8, 0 0 16px #00ffe7;
 }
 
 
@@ -308,5 +319,16 @@ input#blog-search {
   main {
     max-width: 98vw;
     padding: 1rem;
+  }
+  .navbar {
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+  }
+  .nav-center {
+    gap: 1rem;
+  }
+  .bg-nav-btn {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.7rem;
   }
 }
