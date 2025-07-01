@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   var base = window.siteBaseUrl || '';
-  var images = [
+  var images = window.backgroundImages || [
     base + '/assets/images/background/bg1.webp',
     base + '/assets/images/background/bg2.webp',
     base + '/assets/images/background/bg3.webp',

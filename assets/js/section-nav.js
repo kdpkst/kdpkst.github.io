@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   var base = window.siteBaseUrl || '';
-  var pages = [
+  var pages = window.pages || [
     '/',
     '/projects/',
     '/blogs/'

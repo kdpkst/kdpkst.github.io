@@ -1,0 +1,6 @@
+- path: /
+  title: About
+- path: /projects/
+  title: Projects
+- path: /blogs/
+  title: Blogs 

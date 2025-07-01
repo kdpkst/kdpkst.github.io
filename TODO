@@ -1,9 +1,6 @@
-background.js hardcode issue 
-enhance the bg switch buttons in the navbar
 when in "about me" page, the "about me" in the navbar should have some effects for notify user they are in about me 
+when click section nav buttons, use some smooth effect for natigation to next section
 enlarge and beautify the font in navbar
-
-
 
 
 modular improvement: start from About Me
