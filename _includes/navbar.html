@@ -18,9 +18,9 @@
     </button>
   </div>
   <div class="nav-center">
-    <a href="{{ "/" | relative_url }}">About</a>
-    <a href="{{ "/projects" | relative_url }}">Projects</a>
-    <a href="{{ "/blogs" | relative_url }}">Blogs</a>
+    <a href="{{ "/" | relative_url }}" {% if page.url == "/" %}class="active"{% endif %}>About</a>
+    <a href="{{ "/projects" | relative_url }}" {% if page.url == "/projects/" %}class="active"{% endif %}>Projects</a>
+    <a href="{{ "/blogs" | relative_url }}" {% if page.url == "/blogs/" %}class="active"{% endif %}>Blogs</a>
   </div>
   <div class="nav-bg-right">
     <button id="bg-next-nav" class="bg-nav-btn" title="Next background">

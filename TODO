@@ -2,6 +2,4 @@ beautify the text in navbar: change the font to 3D font (use SCSS, or additional
 
 when switcing background images, the animation includes a very short period of "screen color become darker". keep all other settings unchanged, remove this effect.
 
-enhance user experience: for example, when a user is in "about" page, the "about" in the navbar should have some effects (e.g., color change) to notify the user that he is in "about" page (it does not have to be simply color change, use an innovative way) 
-
 create a new git branch: modular improvement, starting from About page
