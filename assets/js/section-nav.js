@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     '/blogs/'
   ];
 
-  var mainContent = document.querySelector('main');
   function navigatePage(direction) {
     var currentPath = window.location.pathname;
     var currentPageIndex = pages.indexOf(currentPath);
@@ -22,14 +21,11 @@ document.addEventListener('DOMContentLoaded', function() {
       nextPageIndex = (currentPageIndex - 1 + pages.length) % pages.length;
     }
 
-    if (mainContent) {
-      mainContent.classList.add('fade-out');
-      setTimeout(function() {
-        window.location.href = base + pages[nextPageIndex];
-      }, 400); // Corresponds to the transition duration
-    } else {
+    document.body.classList.remove('page-loaded');
+
+    setTimeout(function() {
       window.location.href = base + pages[nextPageIndex];
-    }
+    }, 500); // Corresponds to the transition duration
   }
 
   // Page navigation (side arrows)

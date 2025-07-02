@@ -35,12 +35,24 @@
   <meta name="theme-color" content="#ffffff">
 </head>
 <body class="dark-mode">
-  {% include navbar.html %}
-  {% include section-navbar.html %}
-  <main>
-    {{ content }}
-  </main>
-  {% include back-to-top.html %}
-  {% include footer.html %}
+  <div class="content-wrapper">
+    {% include navbar.html %}
+    {% include section-navbar.html %}
+    <main>
+      {{ content }}
+    </main>
+    {% include back-to-top.html %}
+    {% include footer.html %}
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.classList.add('page-loaded');
+    });
+
+    window.addEventListener('beforeunload', function() {
+      document.body.classList.remove('page-loaded');
+    });
+  </script>
 </body>
 </html> 
