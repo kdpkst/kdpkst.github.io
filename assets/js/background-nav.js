@@ -15,7 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Set initial background
   document.body.style.backgroundImage = 'url(' + images[currentIndex] + ')';
+  // Scale image to cover the entire area without distortion, 
+  // may crop image edges if aspect ratios differ.
   document.body.style.backgroundSize = 'cover';
+  // Stretche image to exactly fill the entire area,
+  // may distort image if aspect ratios differ.
+  // document.body.style.backgroundSize = '100% 100%';
   document.body.style.backgroundPosition = 'center';
   document.body.style.backgroundRepeat = 'no-repeat';
   document.body.style.backgroundAttachment = 'fixed';
