@@ -25,23 +25,21 @@ main {
   border-radius: 1.2rem;
   background: rgba(30, 30, 40, 0.85);
   box-shadow: 0 0 24px #00ffe7a0;
-  max-width: 1000px;
-  width: 95vw;
+  /* width: clamp(320px, 75vw, 70em); */
+  width: 75vw;
   margin: 2rem auto;
   padding: 2rem;
-  /* Remove border and border-image */
   border: none;
   animation: none;
   flex: 1 0 auto;
 }
-
 main::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
   border-radius: 1.2rem;
-  padding: 3px; /* Border thickness */
+  padding: 3px; 
   background: linear-gradient(90deg, #00ffe7, #ff00c8, #00ffe7);
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box, 
@@ -50,7 +48,6 @@ main::before {
   mask-composite: exclude;
   pointer-events: none;
 }
-
 @keyframes border-anim {
   0% { border-image-source: linear-gradient(90deg, #00ffe7, #ff00c8, #00ffe7); }
   100% { border-image-source: linear-gradient(270deg, #00ffe7, #ff00c8, #00ffe7); }
