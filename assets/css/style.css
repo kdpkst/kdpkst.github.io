@@ -89,7 +89,8 @@ main::before {
   position: relative;
   overflow: hidden;
   font-size: 1.25rem;
-  text-shadow: 0 0 2px #00ffe7, 0 0 5px #ff00c8;
+  padding: 0.15em 0.3em;
+  text-shadow: 0 0 0.1em #00ffe7, 0 0 0.3em #ff00c8;
 }
 .navbar a:last-child {
   margin-right: 0;
@@ -114,13 +115,12 @@ main::before {
 .navbar a.active {
   animation: pulse-glow 2s infinite alternate;
 }
-
 @keyframes pulse-glow {
   from {
-    text-shadow: 0 0 2px #00ffe7, 0 0 5px #ff00c8;
+    text-shadow: 0 0 0.1em #00ffe7, 0 0 0.3em #ff00c8;
   }
   to {
-    text-shadow: 0 0 5px #00ffe7, 0 0 10px #ff00c8, 0 0 15px #ff00c8;
+    text-shadow: 0 0 0.3em #00ffe7, 0 0 0.6em #ff00c8, 0 0 0.9em #ff00c8;
   }
 }
 .nav-bg-left, .nav-bg-right {
