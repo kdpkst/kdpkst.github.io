@@ -1,7 +1,6 @@
-the sections can be switched (sections include about, projects, and blogs) when clicking section nav buttons, but the switching shows stiffness. add effects that ensures a smooth switching to next section when clicking the section nav button (left and right arrows on the webpage)
+beautify the text in navbar: change the font to 3D font (use SCSS, or additional gems if appropriate)
 
-1. enlarge the text (about, projects, and blogs) in navbar but must keep navbar's height the same
-2. beautify the text in navbar: change the font to 3D font (use SCSS, or additional gems if appropriate)
+when switcing background images, the animation includes a very short period of "screen color become darker". keep all other settings unchanged, remove this effect.
 
 enhance user experience: for example, when a user is in "about" page, the "about" in the navbar should have some effects (e.g., color change) to notify the user that he is in "about" page (it does not have to be simply color change, use an innovative way) 
 

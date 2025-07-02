@@ -76,7 +76,7 @@ main::before {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  padding: 1.5rem 2rem;
+  padding: 1.1rem 2rem;
   background: rgba(35, 35, 54, 0.85);
   border-bottom: 2px solid #00ffe7;
 }
@@ -88,6 +88,7 @@ main::before {
   transition: color 0.2s;
   position: relative;
   overflow: hidden;
+  font-size: 1.2rem;
 }
 .navbar a:last-child {
   margin-right: 0;
