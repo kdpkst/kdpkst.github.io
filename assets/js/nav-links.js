@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       setTimeout(() => {
         window.location.href = destination;
-      }, 600); // Match the CSS transition duration
+      }, 500); // Match the CSS transition duration
     });
   });
 });

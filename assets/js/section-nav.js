@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setTimeout(function() {
       window.location.href = base + pages[nextPageIndex];
-    }, 600); // Corresponds to the transition duration
+    }, 500); // Corresponds to CSS transition duration
   }
 
   // Page navigation (side arrows)
