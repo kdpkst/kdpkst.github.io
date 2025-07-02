@@ -111,7 +111,7 @@ main::before {
 .navbar a:hover::after, .navbar a:focus::after, .navbar a.active::after {
   transform: scaleX(1);
 }
-
+/* effect that users know which page they are in */
 .navbar a.active {
   animation: pulse-glow 2s infinite alternate;
 }
@@ -120,7 +120,7 @@ main::before {
     text-shadow: 0 0 0.1em #00ffe7, 0 0 0.3em #ff00c8;
   }
   to {
-    text-shadow: 0 0 0.3em #00ffe7, 0 0 0.6em #ff00c8, 0 0 0.9em #ff00c8;
+    text-shadow: 0 0 0.4em #00ffe7, 0 0 0.8em #ff00c8, 0 0 1.2em #ff00c8;
   }
 }
 .nav-bg-left, .nav-bg-right {
