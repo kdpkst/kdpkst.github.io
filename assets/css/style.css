@@ -31,22 +31,8 @@ main {
   padding: 2rem;
   border: none;
   animation: none;
-}
-.content-wrapper {
   flex: 1 0 auto;
-  display: flex;
-  flex-direction: column;
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  opacity: 0;
-  transform: translateY(20px);
 }
-.page-loaded .content-wrapper {
-  opacity: 1;
-  transform: translateY(0);
-}
-/* main {
-  flex: 1 0 auto;
-} */
 main::before {
   content: "";
   position: absolute;
@@ -61,6 +47,18 @@ main::before {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
+}
+.content-wrapper {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.page-loaded .content-wrapper {
+  opacity: 1;
+  transform: translateY(0);
 }
 @keyframes border-anim {
   0% { border-image-source: linear-gradient(90deg, #00ffe7, #ff00c8, #00ffe7); }
