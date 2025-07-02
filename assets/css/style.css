@@ -20,20 +20,37 @@ h2, h3 {
   z-index: 1;
 }
 main {
+  position: relative;
+  z-index: 1;
+  border-radius: 1.2rem;
+  background: rgba(30, 30, 40, 0.85);
+  box-shadow: 0 0 24px #00ffe7a0;
   max-width: 1000px;
   width: 95vw;
   margin: 2rem auto;
   padding: 2rem;
-  background: rgba(30, 30, 40, 0.85);
-  border-radius: 1.2rem;
-  box-shadow: 0 0 24px #00ffe7a0;
-  position: relative;
-  z-index: 1;
-  border: 3px solid;
-  border-image: linear-gradient(90deg, #00ffe7, #ff00c8, #00ffe7) 1;
-  animation: border-anim 4s linear infinite;
+  /* Remove border and border-image */
+  border: none;
+  animation: none;
   flex: 1 0 auto;
 }
+
+main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 1.2rem;
+  padding: 3px; /* Border thickness */
+  background: linear-gradient(90deg, #00ffe7, #ff00c8, #00ffe7);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
 @keyframes border-anim {
   0% { border-image-source: linear-gradient(90deg, #00ffe7, #ff00c8, #00ffe7); }
   100% { border-image-source: linear-gradient(270deg, #00ffe7, #ff00c8, #00ffe7); }

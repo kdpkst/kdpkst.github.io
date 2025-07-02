@@ -1,6 +1,8 @@
-when click section nav buttons, use some smooth effect for natigation to next section
-enlarge and beautify the font in navbar
-when in "about me" page, the "about me" in the navbar should have some effects for notify user they are in about me 
+the sections can be switched (sections include about, projects, and blogs) when clicking section nav buttons, but the switching shows stiffness. add effects that ensures a smooth switching to next section when clicking the section nav button (left and right arrows on the webpage)
 
+1. enlarge the text (about, projects, and blogs) in navbar but must keep navbar's height the same
+2. beautify the text in navbar: change the font to 3D font (use SCSS, or additional gems if appropriate)
 
-Create a new git branch: modular improvement, starting from About Me
+enhance user experience: for example, when a user is in "about" page, the "about" in the navbar should have some effects (e.g., color change) to notify the user that he is in "about" page (it does not have to be simply color change, use an innovative way) 
+
+create a new git branch: modular improvement, starting from About page
