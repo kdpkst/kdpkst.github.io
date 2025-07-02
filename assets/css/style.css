@@ -32,6 +32,11 @@ main {
   border: none;
   animation: none;
   flex: 1 0 auto;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+main.fade-out {
+  opacity: 0;
+  transform: translateY(20px);
 }
 main::before {
   content: "";

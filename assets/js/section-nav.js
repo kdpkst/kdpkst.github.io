@@ -5,34 +5,42 @@ document.addEventListener('DOMContentLoaded', function() {
     '/projects/',
     '/blogs/'
   ];
-  
+
+  var mainContent = document.querySelector('main');
   function navigatePage(direction) {
     var currentPath = window.location.pathname;
     var currentPageIndex = pages.indexOf(currentPath);
-    
+
     if (currentPageIndex === -1) {
       currentPageIndex = 0; // Default to About page
     }
-    
+
     var nextPageIndex;
     if (direction === 'next') {
       nextPageIndex = (currentPageIndex + 1) % pages.length;
     } else {
       nextPageIndex = (currentPageIndex - 1 + pages.length) % pages.length;
     }
-    
-    window.location.href = base + pages[nextPageIndex];
+
+    if (mainContent) {
+      mainContent.classList.add('fade-out');
+      setTimeout(function() {
+        window.location.href = base + pages[nextPageIndex];
+      }, 400); // Corresponds to the transition duration
+    } else {
+      window.location.href = base + pages[nextPageIndex];
+    }
   }
-  
+
   // Page navigation (side arrows)
   document.getElementById('section-prev').addEventListener('click', function() {
     navigatePage('prev');
   });
-  
+
   document.getElementById('section-next').addEventListener('click', function() {
     navigatePage('next');
   });
-  
+
   // Keyboard navigation for pages
   document.addEventListener('keydown', function(e) {
     if (e.key === 'ArrowLeft') {
