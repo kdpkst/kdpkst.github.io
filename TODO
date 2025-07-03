@@ -1,3 +1,1 @@
-after hosting on github.io, the section switch animation has partly lost, the part of next section emerges in the webpage is lost, the others are left
-beautify the text in navbar: change the font to 3D font (use SCSS, or additional gems if appropriate)
 when switcing background images, the animation includes a very short period of "screen color become darker". keep all other settings unchanged, remove this effect.

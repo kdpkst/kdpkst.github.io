@@ -1,3 +1,6 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap');
+
 html, body {
   margin: 0;
   padding: 0;
@@ -141,6 +144,38 @@ main::before {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+}
+// 3D effect for main navbar section links
+.nav-center a {
+  font-family: $navbar-3d-font-family;
+  font-weight: $navbar-3d-font-weight;
+  letter-spacing: 0.04em;
+  font-size: $navbar-3d-font-size;
+  color: $navbar-3d-color;
+  background: none;
+  transition: text-shadow 0.2s, color 0.2s, transform 0.2s, font-size 0.2s;
+  text-shadow:
+    0 1px 0 #AAA, 
+    0 2px 0 #999,
+    0 3px 0 #888,
+    0 4px 0 #777,
+    0 5px 0 #666,
+    0 6px 0 #555,
+    0 7px 0 #444,
+    0 8px 0 #333; 
+}
+.nav-center a:hover, .nav-center a:focus, .nav-center a.active {
+  color: $navbar-3d-color-hover;
+  transform: translateY(-2px) scale(1.07);
+  text-shadow:
+    0 1px 0 #AAA,
+    0 2px 0 #999,
+    0 3px 0 #888,
+    0 4px 0 #777,
+    0 5px 0 #666,
+    0 6px 0 #555,
+    0 7px 0 #444,
+    0 8px 0 #333;
 }
 /* Background Nav Buttons */
 .bg-nav-btn {

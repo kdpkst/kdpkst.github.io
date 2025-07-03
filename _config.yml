@@ -25,3 +25,7 @@ plugins:
 # GitHub Pages
 github:
   is_project_page: true
+
+sass:
+  sass_dir: _sass
+  style: compressed  # or expanded, compact, nested (compressed is good for production)
