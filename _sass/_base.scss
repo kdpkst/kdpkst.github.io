@@ -154,10 +154,28 @@ main::before {
   color: $navbar-3d-color;
   background: none;
   transition: text-shadow 0.2s, color 0.2s, transform 0.2s, font-size 0.2s;
+  text-shadow:
+    0 1px 0 #222,
+    0 2px 0 #222,
+    0 3px 0 #222,
+    0 4px 0 #222,
+    0 5px 0 #222,
+    0 6px 0 #222,
+    0 7px 0 #222,
+    0 8px 0 #222,
 }
 .nav-center a:hover, .nav-center a:focus, .nav-center a.active {
   color: $navbar-3d-color-hover;
   transform: translateY(-2px) scale(1.07);
+  text-shadow:
+    0 1px 0 #222,
+    0 2px 0 #222,
+    0 3px 0 #222,
+    0 4px 0 #222,
+    0 5px 0 #222,
+    0 6px 0 #222,
+    0 7px 0 #222,
+    0 8px 0 #222,
 }
 /* Background Nav Buttons */
 .bg-nav-btn {
