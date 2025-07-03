@@ -1,2 +1,1 @@
-beautify the text in navbar: change the font to 3D font (use SCSS, or additional gems if appropriate)
 when switcing background images, the animation includes a very short period of "screen color become darker". keep all other settings unchanged, remove this effect.
