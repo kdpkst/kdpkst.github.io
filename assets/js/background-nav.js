@@ -24,12 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.body.style.backgroundPosition = 'center';
   document.body.style.backgroundRepeat = 'no-repeat';
   document.body.style.backgroundAttachment = 'fixed';
-  document.body.style.transition = 'background-image 0.8s ease-in-out';
-  
-  // Create overlay for smooth transition
-  var overlay = document.createElement('div');
-  overlay.className = 'bg-overlay';
-  document.body.appendChild(overlay);
+  document.body.style.transition = 'background-image 0.5s ease-in-out';
   
   function changeBackground(direction) {
     if (isTransitioning) return;
@@ -42,22 +37,16 @@ document.addEventListener('DOMContentLoaded', function() {
       nextIndex = (currentIndex - 1 + images.length) % images.length;
     }
     
-    // Show overlay
-    overlay.style.opacity = '1';
+    // Remove overlay fade effect
+    // overlay.style.opacity = '1';
     
     setTimeout(function() {
       // Change background
       document.body.style.backgroundImage = 'url(' + images[nextIndex] + ')';
       currentIndex = nextIndex;
-      
       // Save to localStorage
       localStorage.setItem('currentBackgroundIndex', currentIndex.toString());
-      
-      // Hide overlay
-      setTimeout(function() {
-        overlay.style.opacity = '0';
-        isTransitioning = false;
-      }, 100);
+      isTransitioning = false;
     }, 400);
   }
   
