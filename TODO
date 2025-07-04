@@ -1,0 +1,4 @@
+implement the functionality for user to copy my email: when a user hovers over email icon (the code is in social-icons.html), "copy" button appears (ensure it is easy for user to move cursor to this button and click). the effects have to be as below:
+1. when a user hovers over email icon, the "copy" button appears. if the user's cursor moves out of email icon, the "copy" button should dispear
+2. if the user clicks "copy" button, it shows a green tick (or text "Copied!") to notify user it has been copie. After 2 sec, the prompt messages should dispear
+ensure the design align with the style of the website and easy for user to know "this is the copy button"

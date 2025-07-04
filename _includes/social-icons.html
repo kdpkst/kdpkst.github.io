@@ -5,7 +5,11 @@
   <a href="{{ site.data.social-media.linkedin }}"  target="_blank" aria-label="LinkedIn">
     <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.28h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.75 1.37-1.54 2.82-1.54 3.01 0 3.57 1.98 3.57 4.56v5.62z"/></svg>
   </a>
-  <a href="mailto:{{ site.data.social-media.email }}"  aria-label="Email">
-    <svg viewBox="0 0 24 24"><path d="M12 13.065l-11.99-7.065v14h24v-14l-12.01 7.065zm11.99-9.065h-23.98l11.99 7.065 11.99-7.065z"/></svg>
-  </a>
+  <div class="email-container">
+    <a href="mailto:{{ site.data.social-media.email }}" aria-label="Email" class="email-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 13.065l-11.99-7.065v14h24v-14l-12.01 7.065zm11.99-9.065h-23.98l11.99 7.065 11.99-7.065z"/></svg>
+    </a>
+    <button class="copy-button" data-email="{{ site.data.social-media.email }}">Copy</button>
+    <span class="copy-feedback">Copied!</span>
+  </div>
 </div> 
