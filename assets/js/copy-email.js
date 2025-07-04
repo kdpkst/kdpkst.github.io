@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
           copyFeedback.classList.remove('show');
           copyButton.style.display = 'inline-block';
-        }, 2000);
+        }, 1500);
       });
     });
   });
