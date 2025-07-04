@@ -371,10 +371,12 @@ main::before {
   visibility: visible;
   transform: translateY(-50%) scale(1.1);
 }
+// this color is a bit light (can fine-tune later)
 .copy-button:hover {
-  background: #00ffe7;
-  color: #1a1a1a;
-  box-shadow: 0 0 15px #00ffe7, 0 0 20px #00ffe7;
+  background: #ff00c8;
+  color: #fff;
+  border-color: #ff00c8;
+  box-shadow: 0 0 15px #ff00c8, 0 0 20px #ff00c8;
 }
 .copy-feedback {
   position: absolute;
