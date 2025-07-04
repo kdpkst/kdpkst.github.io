@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
     base + '/assets/images/background/bg6.webp'
   ];
   
+  // Preload all background images
+  images.forEach(function(src) {
+    var img = new Image();
+    img.src = src;
+  });
+  
   // Get saved background index or default to 0
   var currentIndex = parseInt(localStorage.getItem('currentBackgroundIndex')) || 0;
   var isTransitioning = false;
