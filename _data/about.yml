@@ -12,14 +12,13 @@ self_image: "/assets/images/placeholder.png"
 technical_skills:
   - category: "Programming Languages"
     skills:
-      - "Python"
       - "Java"
+      - "C#"
+      - "Python"
       - "C"
       - "JavaScript"
       - "HTML"
       - "CSS"
-      - "TypeScript"
-      - "Shell"
   - category: "Development Frameworks"
     skills:
       - "React/Next.js"

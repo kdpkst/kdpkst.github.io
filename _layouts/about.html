@@ -6,7 +6,7 @@ layout: default
     <div class="hero-left">
       <div class="greeting-banner">
         <span class="greeting-emoji">{{ site.data.about.greeting_emoji}}</span>
-        <span class="greeting-text">{{ site.data.about.greeting_text}}</span>
+        <span class="greeting-text">{% for c in site.data.about.greeting_text %}<span>{{ c }}</span>{% endfor %}</span>
       </div>
       <div class="about-intro">
         {% for para in site.data.about.self_introduction %}
