@@ -39,14 +39,14 @@
 <body class="dark-mode">
   <div class="content-wrapper">
     {% include navbar.html %}
-    {% include section-navbar.html %}
+
     <main>
       {{ content }}
     </main>
     {% include back-to-top.html %}
     {% include footer.html %}
   </div>
-
+  {% include section-navbar.html %}
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       document.body.classList.add('page-loaded');
