@@ -50,6 +50,19 @@
     filter: brightness(1.1) saturate(1.2);
     line-height: 1.1;
     word-break: break-word;
+    // 3D text effects
+    text-shadow: 
+      0 1px 0 #b8ec68,
+      0 2px 0 #a0d850,
+      0 3px 0 #88c438,
+      0 4px 0 #70b020,
+      0 6px 1px rgba(0,0,0,.1),
+      0 0 5px rgba(0,0,0,.1),
+      0 1px 3px rgba(0,0,0,.3),
+      0 3px 5px rgba(0,0,0,.2),
+      0 5px 10px rgba(0,0,0,.25),
+      0 10px 10px rgba(0,0,0,.2),
+      0 20px 20px rgba(0,0,0,.15);
     .greeting-emoji {
       display: inline-block;
       cursor: pointer;
@@ -79,69 +92,36 @@
       transition: transform 0.3s;
     }
     .greeting-text:hover span {
-      animation: about-letter-jump 0.8s ease-in-out both;
-      animation-iteration-count: 1;
+      animation: about-text-bounce 0.6s ease-in-out;
     }
-    // Sequential letter jump animation - one letter at a time
-    @for $i from 1 through 30 {
-      .greeting-text:hover span:nth-child(#{$i}) {
-        animation-delay: #{($i - 1) * 0.15}s;
-      }
-    }
-    @keyframes about-letter-jump {
+    @keyframes about-text-bounce {
       0% { transform: translateY(0); }
-      25% { transform: translateY(-0.6em); }
-      50% { transform: translateY(0.3em); }
-      75% { transform: translateY(-0.2em); }
+      25% { transform: translateY(-0.4em); }
+      50% { transform: translateY(0.2em); }
+      75% { transform: translateY(-0.1em); }
       100% { transform: translateY(0); }
-    }
-  }
-
-  .about-name {
-    font-family: 'Orbitron', 'Fira Mono', monospace;
-    font-size: 2.5rem;
-    font-weight: 900;
-    margin: 0;
-    color: #fff;
-    letter-spacing: 1.5px;
-    text-shadow: 0 2px 12px #00ffe7a0;
-  }
-
-  .about-headline {
-    font-family: 'Orbitron', 'Fira Mono', monospace;
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: #b8ec68;
-    margin-bottom: 0.2rem;
-    line-height: 1.2;
-    div + div { margin-top: 0.2em; }
-    .highlight {
-      color: #00ffe7;
-      background: linear-gradient(90deg, #00ffe7 60%, #b8ec68 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 8px #00ffe7, 0 0 16px #b8ec68;
-      font-weight: 900;
     }
   }
 
   .about-intro {
     color: #e0e0e0;
-    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    font-size: clamp(1rem, 1.4vw, 1.75rem);
     line-height: 1.7;
-    font-family: 'Fira Mono', monospace;
+    // font-family: 'Orbitron', 'Fira Mono', monospace;
+    font-family: 'Playfair Display', 'Crimson Text', 'Georgia', 'Times New Roman', serif;
+    font-weight: 400;
+    font-style: italic;
     opacity: 0.98;
     margin-bottom: 0.2em;
     p {
-      margin: 0 0 0.7em 0;
+      margin: 0.25em 0 0.25em 0;
       word-break: break-word;
     }
   }
 
   .contact-links {
     display: flex;
-    gap: 0.7em;
-    margin-top: 0.1em;
+    gap: 1.25em;
     flex-wrap: wrap;
     .contact-link,
     .contact-link:visited {

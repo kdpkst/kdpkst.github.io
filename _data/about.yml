@@ -1,9 +1,8 @@
 greeting_emoji: "👋🏻" 
 greeting_text: "Hi There! I'm Jax"
 self_introduction:
-  - "I am currently a student, interested in software development. Feel free to reach out!"
-  - "I love building things and collaborating with others."
-  - "Always eager to learn new technologies."
+  - "I am currently a Master of Information Technology student at University of Auckland. My interests include software development, cyber security, AI, and investment."
+  - "I will graduate in Nov 2025 and am available to work in New Zealand. I am actively seeking an intern opportunity related to my interests. If you would like to chat, feel free to reach out!"
 contact:
   email: "jaxchen20@gmail.com"
   github: "https://github.com/kdpkst/"
