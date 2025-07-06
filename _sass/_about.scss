@@ -14,7 +14,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: clamp(1.2rem, 2.5vw, 2.5rem);
+    gap: clamp(0.7rem, 1vw, 1.5rem);
     padding: 0;
     background: none;
     box-shadow: none;
@@ -30,16 +30,16 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0.9em;
-    margin-right: 0.5em;
+    margin-right: 0.2em;
   }
 
   .greeting-banner {
     font-family: 'Orbitron', 'Montserrat', 'Fira Sans', sans-serif;
-    font-size: clamp(1.3rem, 2vw, 2.3rem);
+    font-size: clamp(1rem, 1.5vw, 2.3rem);
     font-weight: 900;
     background: linear-gradient(90deg, #00ffe7 10%, #b8ec68 90%);
     color: #18181a;
-    border-radius: 2.5em;
+    border-radius: 0.9em;
     padding: 0.45em 1.5em;
     margin-bottom: 0.1em;
     letter-spacing: 0.04em;
@@ -123,6 +123,13 @@
         box-shadow: 0 0 18px #b8ec68a0;
         svg.icon { filter: drop-shadow(0 0 10px #b8ec68); }
       }
+      &:active, &:visited {
+        background: rgba(0,255,231,0.10);
+        color: #00ffe7;
+        border-color: #00ffe7;
+        box-shadow: 0 0 8px #00ffe7a0;
+        svg.icon { filter: drop-shadow(0 0 6px #00ffe7cc); }
+      }
     }
   }
 
@@ -132,11 +139,14 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    margin-top: 0.2em;
+    margin-top: 1.5em;
+    width: 100%;
+    position: relative;
   }
   .image-glow {
     position: relative;
     display: inline-block;
+    left: -1.5em;
     &::before {
       content: '';
       position: absolute;
@@ -151,8 +161,8 @@
     }
   }
   .self-portrait {
-    width: clamp(7.5rem, 22vw, 11rem);
-    height: clamp(7.5rem, 22vw, 11rem);
+    width: clamp(10rem, 28vw, 15rem);
+    height: clamp(10rem, 28vw, 15rem);
     border-radius: 50%;
     border: 0.18em solid #00ffe7;
     box-shadow: 0 0 2em #00ffe744, 0 0 0 0.7em #232336;
@@ -160,7 +170,7 @@
     background: #18181a;
     position: relative;
     z-index: 1;
-    margin-left: 0.5em;
+    margin-left: 0.2em;
   }
 
   @media (max-width: 700px) {
@@ -174,12 +184,14 @@
       width: 100%;
     }
     .hero-right {
-      justify-content: flex-start;
       margin-top: 1.2em;
-      width: 100%;
+      left: 0;
     }
     .image-glow::before { width: 8em; height: 8em; }
     .self-portrait { width: 6em; height: 6em; }
+    .image-glow {
+      left: 0;
+    }
   }
 
   .skills h2, .explore h2 {
