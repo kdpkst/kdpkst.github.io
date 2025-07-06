@@ -1,64 +1,185 @@
 @import 'variables';
 
 .about-container {
-  max-width: 960px;
+  max-width: 70rem;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1.5rem 1.5rem;
   font-family: 'Fira Mono', monospace;
 
   .about-section {
     margin-bottom: 4rem;
   }
 
-  .hero {
+  .about-section.hero {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    gap: 2rem;
+    gap: clamp(1.2rem, 2.5vw, 2.5rem);
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    position: relative;
+    overflow: visible;
   }
 
-  .hero-text {
-    flex: 2;
+  .hero-left {
+    flex: 2 1 0;
+    min-width: 14rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.9em;
+    margin-right: 0.5em;
   }
 
-  .hero-image {
-    flex: 1;
-    text-align: right;
+  .greeting-banner {
+    font-family: 'Orbitron', 'Montserrat', 'Fira Sans', sans-serif;
+    font-size: clamp(1.3rem, 2vw, 2.3rem);
+    font-weight: 900;
+    background: linear-gradient(90deg, #00ffe7 10%, #b8ec68 90%);
+    color: #18181a;
+    border-radius: 2.5em;
+    padding: 0.45em 1.5em;
+    margin-bottom: 0.1em;
+    letter-spacing: 0.04em;
+    box-shadow: 0 2px 16px #00ffe740;
+    border: none;
+    display: inline-block;
+    text-shadow: 0 2px 12px #b8ec68a0;
+    filter: brightness(1.1) saturate(1.2);
+    line-height: 1.1;
+    word-break: break-word;
   }
 
-  .self-portrait {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 4px solid $navbar-3d-color;
-    box-shadow: 0 0 30px $navbar-3d-shadow5, 0 0 15px $navbar-3d-color inset;
+  .about-name {
+    font-family: 'Orbitron', 'Fira Mono', monospace;
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin: 0;
+    color: #fff;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 12px #00ffe7a0;
   }
 
-  h1 {
-    font-size: 3.5rem;
-    color: $navbar-3d-color-hover;
-    margin-bottom: 1rem;
-    text-shadow: 0 0 10px $navbar-3d-color, 0 0 20px $navbar-3d-color;
-  }
-
-  .self-introduction {
-    color: #ccc;
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-
-  .contact-links a {
-    color: $navbar-3d-shadow1;
-    text-decoration: none;
-    margin-right: 1.5rem;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-
-    &:hover {
-      color: $navbar-3d-color-hover;
-      text-shadow: 0 0 5px $navbar-3d-color;
+  .about-headline {
+    font-family: 'Orbitron', 'Fira Mono', monospace;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #b8ec68;
+    margin-bottom: 0.2rem;
+    line-height: 1.2;
+    div + div { margin-top: 0.2em; }
+    .highlight {
+      color: #00ffe7;
+      background: linear-gradient(90deg, #00ffe7 60%, #b8ec68 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 8px #00ffe7, 0 0 16px #b8ec68;
+      font-weight: 900;
     }
+  }
+
+  .about-intro {
+    color: #e0e0e0;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    line-height: 1.7;
+    font-family: 'Fira Mono', monospace;
+    opacity: 0.98;
+    margin-bottom: 0.2em;
+    p {
+      margin: 0 0 0.7em 0;
+      word-break: break-word;
+    }
+  }
+
+  .contact-links {
+    display: flex;
+    gap: 0.7em;
+    margin-top: 0.1em;
+    flex-wrap: wrap;
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      color: #00ffe7;
+      background: rgba(0,255,231,0.10);
+      text-decoration: none;
+      font-weight: 600;
+      border: 1.5px solid #00ffe7;
+      border-radius: 1.2em;
+      padding: 0.38em 1.3em;
+      font-size: 1em;
+      box-shadow: 0 0 8px #00ffe7a0;
+      transition: background 0.18s, color 0.18s, border 0.18s, box-shadow 0.18s;
+      svg.icon {
+        margin-right: 0.6em;
+        vertical-align: middle;
+        filter: drop-shadow(0 0 6px #00ffe7cc);
+      }
+      &:hover, &:focus {
+        background: #00ffe7;
+        color: #232336;
+        border-color: #b8ec68;
+        box-shadow: 0 0 18px #b8ec68a0;
+        svg.icon { filter: drop-shadow(0 0 10px #b8ec68); }
+      }
+    }
+  }
+
+  .hero-right {
+    flex: 1 1 0;
+    min-width: 8rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-top: 0.2em;
+  }
+  .image-glow {
+    position: relative;
+    display: inline-block;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-50%, -50%);
+      width: clamp(7.5rem, 22vw, 12em);
+      height: clamp(7.5rem, 22vw, 12em);
+      border-radius: 50%;
+      background: radial-gradient(circle, #00ffe720 0%, transparent 80%);
+      z-index: 0;
+      pointer-events: none;
+    }
+  }
+  .self-portrait {
+    width: clamp(7.5rem, 22vw, 11rem);
+    height: clamp(7.5rem, 22vw, 11rem);
+    border-radius: 50%;
+    border: 0.18em solid #00ffe7;
+    box-shadow: 0 0 2em #00ffe744, 0 0 0 0.7em #232336;
+    object-fit: cover;
+    background: #18181a;
+    position: relative;
+    z-index: 1;
+    margin-left: 0.5em;
+  }
+
+  @media (max-width: 700px) {
+    .about-section.hero {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.2em;
+    }
+    .hero-left {
+      margin-right: 0;
+      width: 100%;
+    }
+    .hero-right {
+      justify-content: flex-start;
+      margin-top: 1.2em;
+      width: 100%;
+    }
+    .image-glow::before { width: 8em; height: 8em; }
+    .self-portrait { width: 6em; height: 6em; }
   }
 
   .skills h2, .explore h2 {
