@@ -5,7 +5,8 @@ layout: default
   <section class="about-section hero">
     <div class="hero-left">
       <div class="greeting-banner">
-        {{ site.data.about.greeting }}
+        <span class="greeting-emoji">{{ site.data.about.greeting_emoji}}</span>
+        <span class="greeting-text">{{ site.data.about.greeting_text}}</span>
       </div>
       <div class="about-intro">
         {% for para in site.data.about.self_introduction %}

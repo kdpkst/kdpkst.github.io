@@ -1,4 +1,5 @@
-greeting: "👋🏻 Hi There! I'm Jax"
+greeting_emoji: "👋🏻" 
+greeting_text: "Hi There! I'm Jax"
 self_introduction:
   - "I am currently a student, interested in software development. Feel free to reach out!"
   - "I love building things and collaborating with others."
