@@ -1,4 +1,7 @@
 self_introduction: "Hello! I'm Jax, a passionate developer..."
+contact:
+  email: "kdpkst@gmail.com"
+  github: "kdpkst"
 education:
   - degree: "B.Sc. in Computer Science"
     school: "XJTLU"
@@ -13,7 +16,55 @@ experience:
   - title: "Reasearch Fellow"
     company: "XJTLU"
     years: "2020–2021"
-hobbies:
-  - "Bodybuilding"
-  - "Cooking"
-  - "Reading"
+technical_skills:
+  - category: "Programming Languages"
+    skills:
+      - "Python"
+      - "Java"
+      - "C"
+      - "C++"
+      - "JavaScript"
+      - "HTML"
+      - "CSS"
+      - "TypeScript"
+      - "Shell"
+  - category: "Frameworks"
+    skills:
+      - "React"
+      - "Vue"
+      - "Angular"
+      - "Node.js"
+      - "Spring"
+      - "Flask"
+      - "PyTorch"
+      - "Scikit-learn"
+  - category: "Developer Tools"
+    skills:
+      - "Git"
+      - "Docker"
+      - "Kubernetes"
+      - "AWS"
+      - "GCP"
+      - "Azure"
+      - "Jira"
+      - "Confluence"
+  - category: "Libraries"
+    skills:
+      - "Pandas"
+      - "NumPy"
+      - "Matplotlib"
+      - "Seaborn"
+      - "OpenCV"
+interests:
+  - category: "Technical"
+    hobbies:
+      - "AI & Machine Learning"
+      - "Cybersecurity"
+      - "Open Source"
+      - "Algorithm"
+  - category: "Non-technical"
+    hobbies:
+      - "Bodybuilding"
+      - "Cooking"
+      - "Reading"
+      - "Guitar"

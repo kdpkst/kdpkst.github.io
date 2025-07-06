@@ -1,8 +1,85 @@
-.self-portrait {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 3px solid #00ffe7;
-    margin-bottom: 1.5rem;
-    object-fit: cover;
+@import 'variables';
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  padding: 2rem;
+  font-family: 'Fira Mono', monospace;
+}
+
+.about-sidebar, .about-main {
+  background: rgba(10, 10, 10, 0.8);
+  padding: 2rem;
+  border: 1px solid $navbar-3d-shadow2;
+  box-shadow: 0 0 15px rgba(0, 255, 231, 0.2);
+}
+
+.about-section {
+  margin-bottom: 2rem;
+
+  h2 {
+    color: $navbar-3d-color;
+    border-bottom: 2px solid $navbar-3d-shadow3;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
+
+  h3 {
+    color: $navbar-3d-color-hover;
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: $navbar-3d-shadow1;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.self-intro {
+  text-align: center;
+}
+
+.self-portrait {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid $navbar-3d-color;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 20px $navbar-3d-shadow5;
+}
+
+.skills-list, .interests-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.skills-list li, .interests-list li {
+  background: $navbar-3d-shadow4;
+  color: $navbar-3d-color-hover;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $navbar-3d-shadow2;
+    transform: translateY(-2px);
+  }
+}
