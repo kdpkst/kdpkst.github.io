@@ -1,19 +1,36 @@
-self_introduction: "Hello! I'm Jax, a passionate developer..."
-education:
-  - degree: "B.Sc. in Computer Science"
-    school: "XJTLU"
-    year: "2020-2024"
-  - degree: "M.Sc. in IT"
-    school: "UoA"
-    year: "2025"
-experience:
-  - title: "English Teacher"
-    company: "New Oriental"
-    years: "2024-2025"
-  - title: "Reasearch Fellow"
-    company: "XJTLU"
-    years: "2020–2021"
-hobbies:
-  - "Bodybuilding"
-  - "Cooking"
-  - "Reading"
+greeting: "👋🏻 Hi There! I'm Jax"
+self_introduction:
+  - "I am currently a student, interested in software development. Feel free to reach out!"
+  - "I love building things and collaborating with others."
+  - "Always eager to learn new technologies."
+contact:
+  email: "jaxchen20@gmail.com"
+  github: "https://github.com/kdpkst/"
+self_image: "/assets/images/placeholder.png"
+
+technical_skills:
+  - category: "Programming Languages"
+    skills:
+      - "Python"
+      - "Java"
+      - "C"
+      - "JavaScript"
+      - "HTML"
+      - "CSS"
+      - "TypeScript"
+      - "Shell"
+  - category: "Development Frameworks"
+    skills:
+      - "React/Next.js"
+      - "ASP.NET Core"
+      - "Express.js"
+      - "Node.js"
+      - "Spring"
+  - category: "Developer Tools"
+    skills:
+      - "Git"
+      - "Docker"
+      - "Linux"
+      - "VSCode"
+      - "Cursor"
+      - "Gemini CLI"

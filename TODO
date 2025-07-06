@@ -1,4 +1,5 @@
-implement the functionality for user to copy my email: when a user hovers over email icon (the code is in social-icons.html), "copy" button appears (ensure it is easy for user to move cursor to this button and click). the effects have to be as below:
-1. when a user hovers over email icon, the "copy" button appears. if the user's cursor moves out of email icon, the "copy" button should dispear
-2. if the user clicks "copy" button, it shows a green tick (or text "Copied!") to notify user it has been copie. After 2 sec, the prompt messages should dispear
-ensure the design align with the style of the website and easy for user to know "this is the copy button"
+the template has completed with three sections in this personal website (About, Porjects, Blogs). Incrementally develop three sections one by one, starting from About section (in this branch, only develop About section and leave all other settings unchanged). The requirements are as below:
+1. this section is used to introduce myself. Possible content to be included: a place to put my self-portrait, self-intro, my contact information (may include my email and github account), education, experiecne, technology I learnt and am learning, interests (both technical and non-technical), and etc.
+2. the codes for this section mainly include _about.scss, about.html, about.yml, index.md. Modify other files as less as possible, but adding new files is fine.
+3. design of this section should utilize space as much as possible (it is fine to leave some space for aesthetics, but dont leave a large amount of empty space), making this section informative and well-organized.
+4. the design of style and layout of this section should be modern, aesthetic and innovative, also align with the overall "cyperpunk and hacker" style.
