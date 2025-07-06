@@ -1,13 +1,13 @@
 greeting_emoji: "👋🏻" 
 greeting_text: "Hi There! I'm Jax"
 self_introduction:
-  - "I am currently a Master of Information Technology student at University of Auckland. My interests include software development, cyber security, AI, and investment."
-  - "I will graduate in Nov 2025 and am available to work in New Zealand. I am actively seeking an intern opportunity related to my interests. If you would like to chat, feel free to reach out!"
+  - "I am currently a Master of Information Technology student at University of Auckland, with interests in software development, cybersecurity, AI, and investment."
+  - "I will graduate in Nov 2025 and am open to internship opportunities in New Zealand that align with my interests. If you're an employer looking for a motivated intern, or someone who shares similar passions and wants to collaborate on a project, I'd love to connect. Feel free to reach out!"
 contact:
   email: "jaxchen20@gmail.com"
   github: "https://github.com/kdpkst/"
-self_image: "/assets/images/placeholder.png"
-
+  linkedin: "https://www.linkedin.com/in/jax-chen-05048b2bb/"
+self_image: "/assets/images/profile-photos/pp.png"
 technical_skills:
   - category: "Programming Languages"
     skills:
