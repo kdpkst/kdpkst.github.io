@@ -50,53 +50,78 @@
     filter: brightness(1.1) saturate(1.2);
     line-height: 1.1;
     word-break: break-word;
-  }
-
-  .about-name {
-    font-family: 'Orbitron', 'Fira Mono', monospace;
-    font-size: 2.5rem;
-    font-weight: 900;
-    margin: 0;
-    color: #fff;
-    letter-spacing: 1.5px;
-    text-shadow: 0 2px 12px #00ffe7a0;
-  }
-
-  .about-headline {
-    font-family: 'Orbitron', 'Fira Mono', monospace;
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: #b8ec68;
-    margin-bottom: 0.2rem;
-    line-height: 1.2;
-    div + div { margin-top: 0.2em; }
-    .highlight {
-      color: #00ffe7;
-      background: linear-gradient(90deg, #00ffe7 60%, #b8ec68 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 8px #00ffe7, 0 0 16px #b8ec68;
-      font-weight: 900;
+    // 3D text effects
+    text-shadow: 
+      0 1px 0 #b8ec68,
+      0 2px 0 #a0d850,
+      0 3px 0 #88c438,
+      0 4px 0 #70b020,
+      0 6px 1px rgba(0,0,0,.1),
+      0 0 5px rgba(0,0,0,.1),
+      0 1px 3px rgba(0,0,0,.3),
+      0 3px 5px rgba(0,0,0,.2),
+      0 5px 10px rgba(0,0,0,.25),
+      0 10px 10px rgba(0,0,0,.2),
+      0 20px 20px rgba(0,0,0,.15);
+    .greeting-emoji {
+      display: inline-block;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .greeting-emoji:hover {
+      animation: about-wave-hand 1.1s infinite;
+      transform-origin: 70% 70%;
+    }
+    @keyframes about-wave-hand {
+      0% { transform: rotate(0deg); }
+      10% { transform: rotate(18deg); }
+      20% { transform: rotate(-12deg); }
+      30% { transform: rotate(18deg); }
+      40% { transform: rotate(-8deg); }
+      50% { transform: rotate(12deg); }
+      60% { transform: rotate(0deg); }
+      100% { transform: rotate(0deg); }
+    }
+    .greeting-text {
+      display: inline-block;
+      cursor: pointer;
+      // Each letter will be wrapped in a span for animation
+    }
+    .greeting-text span {
+      display: inline-block;
+      transition: transform 0.3s;
+    }
+    .greeting-text:hover span {
+      animation: about-text-bounce 0.6s ease-in-out;
+    }
+    @keyframes about-text-bounce {
+      0% { transform: translateY(0); }
+      25% { transform: translateY(-0.4em); }
+      50% { transform: translateY(0.2em); }
+      75% { transform: translateY(-0.1em); }
+      100% { transform: translateY(0); }
     }
   }
 
   .about-intro {
     color: #e0e0e0;
-    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    font-size: clamp(1rem, 1.4vw, 1.75rem);
     line-height: 1.7;
-    font-family: 'Fira Mono', monospace;
+    // font-family: 'Orbitron', 'Fira Mono', monospace;
+    font-family: 'Playfair Display', 'Crimson Text', 'Georgia', 'Times New Roman', serif;
+    font-weight: 400;
+    font-style: italic;
     opacity: 0.98;
     margin-bottom: 0.2em;
     p {
-      margin: 0 0 0.7em 0;
+      margin: 0.25em 0 0.25em 0;
       word-break: break-word;
     }
   }
 
   .contact-links {
     display: flex;
-    gap: 0.7em;
-    margin-top: 0.1em;
+    gap: 1.25em;
     flex-wrap: wrap;
     .contact-link,
     .contact-link:visited {
@@ -150,22 +175,43 @@
       width: clamp(7.5rem, 22vw, 12em);
       height: clamp(7.5rem, 22vw, 12em);
       border-radius: 50%;
-      background: radial-gradient(circle, #00ffe720 0%, transparent 80%);
+      background: conic-gradient(from 0deg, #00ffe7 0%, #b8ec68 25%, #ff00c8 50%, #00ffe7 100%);
+      filter: blur(8px) brightness(1.2);
+      animation: about-rotate-glow 3.5s linear infinite, about-pulse-glow 2.2s ease-in-out infinite alternate;
       z-index: 0;
       pointer-events: none;
     }
+  }
+  @keyframes about-rotate-glow {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+  @keyframes about-pulse-glow {
+    0% { filter: blur(8px) brightness(1.2); opacity: 0.7; }
+    100% { filter: blur(16px) brightness(1.5); opacity: 1; }
   }
   .self-portrait {
     width: clamp(10rem, 28vw, 15rem);
     height: clamp(10rem, 28vw, 15rem);
     border-radius: 50%;
     border: 0.18em solid #00ffe7;
-    box-shadow: 0 0 2em #00ffe744, 0 0 0 0.7em #232336;
+    box-shadow: 0 0 2em #00ffe744, 0 0 0 0.7em #232336, 0 0 0.8em 0.2em #b8ec68cc;
     object-fit: cover;
     background: #18181a;
     position: relative;
     z-index: 1;
     margin-left: 0.2em;
+    animation: about-portrait-pop 2.2s cubic-bezier(.4,0,.6,1) 1;
+    transition: box-shadow 0.4s ease-in-out;
+    
+    &:hover {
+      box-shadow: 0 0 4em #00ffe788, 0 0 0 0.7em #232336, 0 0 1.5em 0.4em #b8ec68ee, 0 0 2.5em 0.2em #ff00c8cc, 0 0 3em 0.1em #00ffe7aa;
+    }
+  }
+  @keyframes about-portrait-pop {
+    0% { transform: scale(0.92) rotate(-6deg); filter: brightness(0.7); }
+    60% { transform: scale(1.05) rotate(2deg); filter: brightness(1.2); }
+    100% { transform: scale(1) rotate(0deg); filter: brightness(1); }
   }
 
   @media (max-width: 700px) {

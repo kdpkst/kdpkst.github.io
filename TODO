@@ -1,5 +1,0 @@
-the template has completed with three sections in this personal website (About, Porjects, Blogs). Incrementally develop three sections one by one, starting from About section (in this branch, only develop About section and leave all other settings unchanged). The requirements are as below:
-1. this section is used to introduce myself. Possible content to be included: a place to put my self-portrait, self-intro, my contact information (may include my email and github account), education, experiecne, technology I learnt and am learning, interests (both technical and non-technical), and etc.
-2. the codes for this section mainly include _about.scss, about.html, about.yml, index.md. Modify other files as less as possible, but adding new files is fine.
-3. design of this section should utilize space as much as possible (it is fine to leave some space for aesthetics, but dont leave a large amount of empty space), making this section informative and well-organized.
-4. the design of style and layout of this section should be modern, aesthetic and innovative, also align with the overall "cyperpunk and hacker" style.
