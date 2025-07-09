@@ -1,7 +1,2 @@
-1. hardcode issue in radar-skills:  
-  const RADAR_RADIUS = 110;
-  const POINT_RADIUS = 14;
-  const LABEL_FONT_SIZE = 14;
-  const LABEL_PADDING = 8;
-  const CENTER = 120;
-2. 
+1. for now, category title overlaps with radar card, fix it
+2. if there are more data, even overlap avoid algo is implemented. there will be very crowded. so first enlarge the entire radar, second, implement the algorithm that ensure a more dispersed distribution 
