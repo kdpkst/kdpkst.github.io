@@ -36,16 +36,33 @@ layout: default
   </section>
 
   <section class="about-section skills">
-    <h2>Technical Skills</h2>
     <div class="skills-grid">
       {% for category in site.data.about.technical_skills %}
-        <div class="skill-category">
-          <h3>{{ category.category }}</h3>
-          <ul class="skills-list">
-            {% for skill in category.skills %}
-              <li>{{ skill }}</li>
-            {% endfor %}
-          </ul>
+        <div class="radar-skill-card">
+          <div class="radar-title">{{ category.category }}</div>
+          <svg class="radar-svg" data-radar-category="{{ category.category | slugify }}" viewBox="0 0 300 300">
+            <circle class="radar-bg" cx="150" cy="150" r="140"/>
+            <circle class="radar-ring" cx="150" cy="150" r="120"/>
+            <circle class="radar-ring" cx="150" cy="150" r="90"/>
+            <circle class="radar-ring" cx="150" cy="150" r="60"/>
+            <line class="radar-cross" x1="150" y1="30" x2="150" y2="270"/>
+            <line class="radar-cross" x1="30" y1="150" x2="270" y2="150"/>
+            <line class="radar-cross" x1="60" y1="60" x2="240" y2="240"/>
+            <line class="radar-cross" x1="240" y1="60" x2="60" y2="240"/>
+            <g>
+              <line x1="150" y1="150" x2="150" y2="30" stroke="#b8ec68" stroke-width="2.5" opacity="0.7">
+                <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 150 150" to="360 150 150" dur="3s" repeatCount="indefinite" />
+              </line>
+            </g>
+            <g class="radar-skills-group">
+              {% for skill in category.skills %}
+                <g class="radar-skill-point" data-skill="{{ skill }}">
+                  <circle cx="150" cy="150" r="8" fill="#00ffe7" opacity="0.8" />
+                  <text x="150" y="150" alignment-baseline="middle" text-anchor="middle" class="radar-skill-label">{{ skill }}</text>
+                </g>
+              {% endfor %}
+            </g>
+          </svg>
         </div>
       {% endfor %}
     </div>
@@ -65,3 +82,4 @@ layout: default
     </div>
   </section>
 </div> 
+<script src="/assets/js/radar-skills.js"></script> 
