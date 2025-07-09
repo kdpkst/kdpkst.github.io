@@ -1,0 +1,7 @@
+1. hardcode issue in radar-skills:  
+  const RADAR_RADIUS = 110;
+  const POINT_RADIUS = 14;
+  const LABEL_FONT_SIZE = 14;
+  const LABEL_PADDING = 8;
+  const CENTER = 120;
+2. 

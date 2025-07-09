@@ -367,4 +367,69 @@
       color: #ccc;
     }
   }
+
+  .radar-skill-card {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: none;
+    box-shadow: 0 0 32px #00ffe720, 0 2px 16px #b8ec6840;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2.5rem auto;
+    padding: 0;
+    position: relative;
+  }
+
+  .radar-svg {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: none;
+    display: block;
+    aspect-ratio: 1 / 1;
+    overflow: visible;
+  }
+
+  .radar-title {
+    font-family: 'Orbitron', 'Montserrat', 'Fira Sans', sans-serif;
+    font-size: 1.25rem;
+    fill: #00ffe7;
+    text-shadow: 0 0 12px #00ffe7cc, 0 2px 8px #232336cc;
+    font-weight: 900;
+    letter-spacing: 2px;
+    dominant-baseline: middle;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .radar-skill-point circle {
+    filter: drop-shadow(0 0 8px #00ffe7cc);
+    transition: filter 0.2s;
+    cursor: pointer;
+    stroke: #18181a;
+    stroke-width: 2px;
+  }
+  .radar-skill-point:hover circle {
+    filter: drop-shadow(0 0 18px #b8ec68cc) brightness(1.3);
+  }
+
+  .radar-skill-label {
+    font-family: 'Orbitron', 'Montserrat', 'Fira Sans', sans-serif;
+    font-size: 0.95rem;
+    fill: #b8ec68;
+    paint-order: stroke fill;
+    stroke: #18181a;
+    stroke-width: 2.5px;
+    stroke-linejoin: round;
+    pointer-events: none;
+    user-select: none;
+    text-shadow: 0 2px 8px #232336cc;
+  }
+
+  .radar-svg line {
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 6px #00ffe7cc);
+  }
 }

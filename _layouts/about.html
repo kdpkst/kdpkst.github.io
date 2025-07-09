@@ -39,13 +39,36 @@ layout: default
     <h2 class="section-title">Technical Skills</h2>
     <div class="skills-grid">
       {% for category in site.data.about.technical_skills %}
-        <div class="skill-category-card">
-          <h3 class="skill-category-title">{{ category.category }}</h3>
-          <ul class="skill-tags">
-            {% for skill in category.skills %}
-              <li class="skill-tag">{{ skill }}</li>
-            {% endfor %}
-          </ul>
+        <div class="radar-skill-card">
+          <svg class="radar-svg" data-radar-category="{{ category.category | slugify }}" viewBox="0 0 240 240" width="240" height="240">
+            <!-- Radar frame: concentric circles -->
+            <circle cx="120" cy="120" r="120" fill="#18181a" />
+            <circle cx="120" cy="120" r="100" fill="none" stroke="#00ffe7" stroke-width="2" opacity="0.18" />
+            <circle cx="120" cy="120" r="70" fill="none" stroke="#00ffe7" stroke-width="1.5" opacity="0.12" />
+            <circle cx="120" cy="120" r="40" fill="none" stroke="#00ffe7" stroke-width="1" opacity="0.08" />
+            <!-- Radar coordinates: cross lines -->
+            <line x1="120" y1="20" x2="120" y2="220" stroke="#00ffe7" stroke-width="1" opacity="0.12" />
+            <line x1="20" y1="120" x2="220" y2="120" stroke="#00ffe7" stroke-width="1" opacity="0.12" />
+            <line x1="40" y1="40" x2="200" y2="200" stroke="#00ffe7" stroke-width="1" opacity="0.08" />
+            <line x1="200" y1="40" x2="40" y2="200" stroke="#00ffe7" stroke-width="1" opacity="0.08" />
+            <!-- Animated scanning arm -->
+            <g>
+              <line x1="120" y1="120" x2="120" y2="20" stroke="#b8ec68" stroke-width="2.5" opacity="0.7">
+                <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 120 120" to="360 120 120" dur="3s" repeatCount="indefinite" />
+              </line>
+            </g>
+            <!-- Category title -->
+            <text x="120" y="38" text-anchor="middle" class="radar-title">{{ category.category }}</text>
+            <!-- Skill points: randomly scattered, not overlapping -->
+            <g class="radar-skills-group">
+              {% for skill in category.skills %}
+                <g class="radar-skill-point" data-skill="{{ skill }}">
+                  <circle cx="120" cy="120" r="10" fill="#00ffe7" opacity="0.8" />
+                  <text x="120" y="120" alignment-baseline="middle" text-anchor="middle" class="radar-skill-label">{{ skill }}</text>
+                </g>
+              {% endfor %}
+            </g>
+          </svg>
         </div>
       {% endfor %}
     </div>
@@ -65,3 +88,4 @@ layout: default
     </div>
   </section>
 </div> 
+<script src="/assets/js/radar-skills.js"></script> 
