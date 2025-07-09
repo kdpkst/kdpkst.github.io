@@ -1,2 +1,1 @@
-1. for now, category title overlaps with radar card, fix it
-2. if there are more data, even overlap avoid algo is implemented. there will be very crowded. so first enlarge the entire radar, second, implement the algorithm that ensure a more dispersed distribution 
+if there are more data, even overlap avoid algo is implemented. there will be very crowded. so first enlarge the entire radar, second, implement the algorithm that ensure a more dispersed distribution 

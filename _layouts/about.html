@@ -36,12 +36,12 @@ layout: default
   </section>
 
   <section class="about-section skills">
-    <h2 class="section-title">Technical Skills</h2>
     <div class="skills-grid">
       {% for category in site.data.about.technical_skills %}
         <div class="radar-skill-card">
+          <div class="radar-title">{{ category.category }}</div>
           <svg class="radar-svg" data-radar-category="{{ category.category | slugify }}" viewBox="0 0 300 300">
-            <circle class="radar-bg" cx="150" cy="150" r="150"/>
+            <circle class="radar-bg" cx="150" cy="150" r="140"/>
             <circle class="radar-ring" cx="150" cy="150" r="120"/>
             <circle class="radar-ring" cx="150" cy="150" r="90"/>
             <circle class="radar-ring" cx="150" cy="150" r="60"/>
