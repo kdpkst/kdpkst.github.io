@@ -368,61 +368,65 @@
     }
   }
 
+// Technical Skills (Radar) Section
+.radar-skill-card {
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto 2.5rem auto;
+  padding: 0;
+  position: relative;
+  overflow: visible;
+}
+
+// Responsive for small screens
+@media (max-width: 600px) {
   .radar-skill-card {
-    width: 100%;
-    max-width: 300px;
-    aspect-ratio: 1 / 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 0 auto 2.5rem auto;
-    padding: 0;
-    position: relative;
-    overflow: visible;
+    max-width: 98vw;
   }
+}
 
-  .radar-svg {
-    width: 100%;
-    height: 100%;
-    aspect-ratio: 1 / 1;
-    display: block;
-  }
+// Radar SVG
+.radar-svg {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  display: block;
+}
 
-  .radar-svg .radar-bg {
-    fill: #18181a;
-  }
-  .radar-svg .radar-ring {
-    fill: none;
-    stroke: #00ffe7;
-  }
-  .radar-svg .radar-ring:nth-of-type(2) {
-    stroke-width: 2;
-    opacity: 0.18;
-  }
-  .radar-svg .radar-ring:nth-of-type(3) {
-    stroke-width: 1.5;
-    opacity: 0.12;
-  }
-  .radar-svg .radar-ring:nth-of-type(4) {
-    stroke-width: 1;
-    opacity: 0.08;
-  }
-  .radar-svg .radar-cross {
-    stroke: #00ffe7;
-    stroke-width: 1;
-    opacity: 0.12;
-  }
-  .radar-svg .radar-cross:nth-of-type(7),
-  .radar-svg .radar-cross:nth-of-type(8) {
-    opacity: 0.08;
-  }
-
-  @media (max-width: 600px) {
-    .radar-skill-card {
-      max-width: 98vw;
-    }
-  }
+// Radar SVG Elements
+.radar-svg .radar-bg {
+  fill: #18181a;
+}
+.radar-svg .radar-ring {
+  fill: none;
+  stroke: #00ffe7;
+}
+.radar-svg .radar-ring:nth-of-type(2) {
+  stroke-width: 2;
+  opacity: 0.18;
+}
+.radar-svg .radar-ring:nth-of-type(3) {
+  stroke-width: 1.5;
+  opacity: 0.12;
+}
+.radar-svg .radar-ring:nth-of-type(4) {
+  stroke-width: 1;
+  opacity: 0.08;
+}
+.radar-svg .radar-cross {
+  stroke: #00ffe7;
+  stroke-width: 1;
+  opacity: 0.12;
+}
+.radar-svg .radar-cross:nth-of-type(7),
+.radar-svg .radar-cross:nth-of-type(8) {
+  opacity: 0.08;
+}
 
   .radar-title {
     font-family: 'Orbitron', 'Montserrat', 'Fira Sans', sans-serif;
