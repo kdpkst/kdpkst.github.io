@@ -1,3 +1,4 @@
-1. if there are more data, even overlap avoid algo is implemented. there will be very crowded. so first enlarge the entire radar, second, implement the algorithm that ensure a more dispersed distribution
-2. radar-skills.js hardcode issue
-3. optmize radar-skill-point and radar-skill-label
+1. radar-skills.js hardcode issue
+2. optmize radar-skill-point and radar-skill-label (smaller size to accommodate more lables)
+3. add hovering effects: add real radar green shadow
+4. 
