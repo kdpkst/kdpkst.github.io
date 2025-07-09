@@ -235,7 +235,7 @@
     }
   }
 
-  .skills h2, .explore h2 {
+  .skills .section-title {
     text-align: center;
     font-size: 2.5rem;
     color: $navbar-3d-color;
@@ -246,42 +246,77 @@
 
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
   }
 
-  .skill-category {
-    background: rgba(10, 10, 10, 0.8);
+  .skill-category-card {
+    background: #1c1c1c;
+    border-radius: 15px;
     padding: 2rem;
-    border: 1px solid $navbar-3d-shadow2;
+    border: 1px solid #333;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(transparent, rgba(0, 255, 231, 0.1), transparent 30%);
+      animation: rotate 4s linear infinite;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+      border-color: rgba(0, 255, 231, 0.5);
+    }
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+
+  .skill-category-title {
+    color: #00ffe7;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .skill-tags {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .skill-tag {
+    background: rgba(0, 255, 231, 0.1);
+    color: #00ffe7;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(0, 255, 231, 0.2);
     transition: all 0.3s ease;
 
     &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0 15px rgba(0, 255, 231, 0.2);
-    }
-
-    h3 {
-      color: $navbar-3d-color-hover;
-      margin-bottom: 1.5rem;
-      border-bottom: 1px solid $navbar-3d-shadow3;
-      padding-bottom: 0.5rem;
-    }
-
-    .skills-list {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.7rem;
-
-      li {
-        background: $navbar-3d-shadow4;
-        color: $navbar-3d-color-hover;
-        padding: 0.5rem 0.9rem;
-        border-radius: 4px;
-        font-size: 0.95rem;
-      }
+      background: #00ffe7;
+      color: #1c1c1c;
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(0, 255, 231, 0.5);
     }
   }
 

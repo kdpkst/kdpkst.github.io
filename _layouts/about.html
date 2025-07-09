@@ -36,14 +36,14 @@ layout: default
   </section>
 
   <section class="about-section skills">
-    <h2>Technical Skills</h2>
+    <h2 class="section-title">Technical Skills</h2>
     <div class="skills-grid">
       {% for category in site.data.about.technical_skills %}
-        <div class="skill-category">
-          <h3>{{ category.category }}</h3>
-          <ul class="skills-list">
+        <div class="skill-category-card">
+          <h3 class="skill-category-title">{{ category.category }}</h3>
+          <ul class="skill-tags">
             {% for skill in category.skills %}
-              <li>{{ skill }}</li>
+              <li class="skill-tag">{{ skill }}</li>
             {% endfor %}
           </ul>
         </div>
