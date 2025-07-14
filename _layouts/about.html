@@ -41,23 +41,33 @@ layout: default
         <div class="radar-skill-card">
           <div class="radar-title">{{ category.category }}</div>
           <svg class="radar-svg" data-radar-category="{{ category.category | slugify }}" viewBox="0 0 300 300">
+            <defs>
+              <radialGradient id="radar-fan-gradient" cx="50%" cy="50%" r="100%" fx="50%" fy="50%">
+                <stop offset="0%" stop-color="#39ff14" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#39ff14" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
             <circle class="radar-bg" cx="150" cy="150" r="140"/>
-            <circle class="radar-ring" cx="150" cy="150" r="120"/>
-            <circle class="radar-ring" cx="150" cy="150" r="90"/>
-            <circle class="radar-ring" cx="150" cy="150" r="60"/>
-            <line class="radar-cross" x1="150" y1="30" x2="150" y2="270"/>
-            <line class="radar-cross" x1="30" y1="150" x2="270" y2="150"/>
-            <line class="radar-cross" x1="60" y1="60" x2="240" y2="240"/>
-            <line class="radar-cross" x1="240" y1="60" x2="60" y2="240"/>
-            <g>
-              <line x1="150" y1="150" x2="150" y2="30" stroke="#b8ec68" stroke-width="2.5" opacity="0.7">
-                <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 150 150" to="360 150 150" dur="3s" repeatCount="indefinite" />
-              </line>
+            <circle class="radar-ring" cx="150" cy="150" r="140"/>
+            <circle class="radar-ring" cx="150" cy="150" r="125"/>
+            <circle class="radar-ring" cx="150" cy="150" r="110"/>
+            <circle class="radar-ring" cx="150" cy="150" r="95"/>
+            <circle class="radar-ring" cx="150" cy="150" r="80"/>
+            <circle class="radar-ring" cx="150" cy="150" r="65"/>
+            <circle class="radar-ring" cx="150" cy="150" r="50"/>
+            <circle class="radar-ring" cx="150" cy="150" r="35"/>
+            <circle class="radar-ring" cx="150" cy="150" r="20"/>
+            <line class="radar-cross" x1="150" y1="10" x2="150" y2="290"/>
+            <line class="radar-cross" x1="10" y1="150" x2="290" y2="150"/>
+            <g class="radar-sweep-group">
+              <path class="radar-sweep-fan" d="M150,150 L150,10 A140,140 0 0,1 290,150 Z" />
+              <line class="radar-sweep-line" x1="150" y1="150" x2="150" y2="10" />
+              <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 150 150" to="360 150 150" dur="3s" repeatCount="indefinite" />
             </g>
             <g class="radar-skills-group">
               {% for skill in category.skills %}
                 <g class="radar-skill-point" data-skill="{{ skill }}">
-                  <circle cx="150" cy="150" r="8" fill="#00ffe7" opacity="0.8" />
+                  <circle cx="150" cy="150" r="8" fill="#39ff14" opacity="0.8" />
                   <text x="150" y="150" alignment-baseline="middle" text-anchor="middle" class="radar-skill-label">{{ skill }}</text>
                 </g>
               {% endfor %}

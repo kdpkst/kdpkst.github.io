@@ -1,27 +1,32 @@
-// radar-skills.js
-
 document.addEventListener('DOMContentLoaded', function () {
-  // The radius of the radar (distance from center to edge of SVG circle, matches r=140 in about.html)
-  const RADAR_RADIUS = 140;
-  // The center coordinate of the radar SVG (matches cx=150, cy=150 in about.html)
-  const CENTER = 150;
-  // The radius of the blue skill point circle
+  // === CONSTANTS ===
+  // SVG and radar geometry
+  const RADAR_RADIUS = 140; // matches r=140 in about.html
+  const CENTER = 150; // matches cx=150, cy=150 in about.html
+  // Skill point appearance
   const POINT_RADIUS = 8;
-  // The base font size for skill labels
-  const LABEL_FONT_SIZE = 14;
-  // Padding between labels/points to avoid overlap
-  const LABEL_PADDING = 6;
-  // The initial minimum distance between points/labels for Poisson Disk Sampling (higher = more dispersed)
-  const BASE_MIN_DIST = 44;
-  // The minimum allowed minDist if crowded
-  const MIN_MIN_DIST = 22;
-  // Maximum attempts to place a point
-  const MAX_ATTEMPTS = 80;
+  // Label appearance
+  const LABEL_FONT_SIZE = 10;
+  const LABEL_FONT_SIZE_MIN = 7;
+  const LABEL_FONT_SIZE_STEP = 1;
+  const LABEL_Y_OFFSET = 2;
+  // Label bounding box estimation
+  const LABEL_WIDTH_FACTOR = 0.6;
+  const LABEL_WIDTH_PADDING = 14;
+  const LABEL_HEIGHT_PADDING = 8;
+  // Placement algorithm
+  const LABEL_PADDING = 12;
+  const BASE_MIN_DIST = 60;
+  const MIN_MIN_DIST = 45;
+  const MIN_RADIUS = 10;
+  const MAX_ATTEMPTS = 120;
+  const MIN_DIST_STEP = 4;
+  const MIN_DIST_ATTEMPT_STEP = 20;
 
   function getLabelBBox(text, fontSize) {
     return {
-      width: text.length * fontSize * 0.6 + 8,
-      height: fontSize + 4
+      width: text.length * fontSize * LABEL_WIDTH_FACTOR + LABEL_WIDTH_PADDING,
+      height: fontSize + LABEL_HEIGHT_PADDING
     };
   }
 
@@ -55,12 +60,12 @@ document.addEventListener('DOMContentLoaded', function () {
       while (!found && attempt < MAX_ATTEMPTS) {
         const angle = Math.random() * 2 * Math.PI;
         const maxR = RADAR_RADIUS - Math.max(bbox.width, bbox.height) / 2 - POINT_RADIUS - LABEL_PADDING;
-        const minR = 30;
+        const minR = MIN_RADIUS;
         const radius = minR + Math.random() * (maxR - minR);
         x = CENTER + radius * Math.cos(angle);
         y = CENTER + radius * Math.sin(angle);
         labelX = x;
-        labelY = y + fontSize / 2 - 2;
+        labelY = y + fontSize / 2 - LABEL_Y_OFFSET;
         const thisBox = {
           x: labelX,
           y: labelY - fontSize / 2,
@@ -79,11 +84,11 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
           attempt++;
           // Gradually reduce minDist if too crowded
-          if (attempt % 20 === 0 && minDist > MIN_MIN_DIST) {
-            minDist -= 4;
+          if (attempt % MIN_DIST_ATTEMPT_STEP === 0 && minDist > MIN_MIN_DIST) {
+            minDist -= MIN_DIST_STEP;
           }
-          if (attempt > MAX_ATTEMPTS / 2 && fontSize > 10) {
-            fontSize -= 1;
+          if (attempt > MAX_ATTEMPTS / 2 && fontSize > LABEL_FONT_SIZE_MIN) {
+            fontSize -= LABEL_FONT_SIZE_STEP;
             bbox = getLabelBBox(skill, fontSize);
           }
         }
@@ -102,4 +107,15 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
-}); 
+
+  // Ensure hovered label and point are always on top in SVG stacking order
+  document.querySelectorAll('.radar-skill-label').forEach(label => {
+    label.addEventListener('mouseenter', function() {
+      const point = this.closest('.radar-skill-point');
+      if (point && point.parentNode) {
+        // Move to end, brings to top
+        point.parentNode.appendChild(point); 
+      }
+    });
+  });
+});
