@@ -6,20 +6,20 @@ document.addEventListener('DOMContentLoaded', function () {
   // Skill point appearance
   const POINT_RADIUS = 8;
   // Label appearance
-  const LABEL_FONT_SIZE = 14;
-  const LABEL_FONT_SIZE_MIN = 10;
+  const LABEL_FONT_SIZE = 10;
+  const LABEL_FONT_SIZE_MIN = 7;
   const LABEL_FONT_SIZE_STEP = 1;
-  const LABEL_Y_OFFSET = 2;
+  const LABEL_Y_OFFSET = 5;
   // Label bounding box estimation
   const LABEL_WIDTH_FACTOR = 0.6;
-  const LABEL_WIDTH_PADDING = 8;
-  const LABEL_HEIGHT_PADDING = 4;
+  const LABEL_WIDTH_PADDING = 14;
+  const LABEL_HEIGHT_PADDING = 8;
   // Placement algorithm
   const LABEL_PADDING = 12;
   const BASE_MIN_DIST = 60;
   const MIN_MIN_DIST = 45;
-  const MIN_RADIUS = 30;
-  const MAX_ATTEMPTS = 80;
+  const MIN_RADIUS = 15;
+  const MAX_ATTEMPTS = 100;
   const MIN_DIST_STEP = 4;
   const MIN_DIST_ATTEMPT_STEP = 20;
 
