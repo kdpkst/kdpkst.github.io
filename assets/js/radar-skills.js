@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const LABEL_FONT_SIZE = 10;
   const LABEL_FONT_SIZE_MIN = 7;
   const LABEL_FONT_SIZE_STEP = 1;
-  const LABEL_Y_OFFSET = 5;
+  const LABEL_Y_OFFSET = 2;
   // Label bounding box estimation
   const LABEL_WIDTH_FACTOR = 0.6;
   const LABEL_WIDTH_PADDING = 14;
@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const LABEL_PADDING = 12;
   const BASE_MIN_DIST = 60;
   const MIN_MIN_DIST = 45;
-  const MIN_RADIUS = 15;
-  const MAX_ATTEMPTS = 100;
+  const MIN_RADIUS = 10;
+  const MAX_ATTEMPTS = 120;
   const MIN_DIST_STEP = 4;
   const MIN_DIST_ATTEMPT_STEP = 20;
 
@@ -105,6 +105,17 @@ document.addEventListener('DOMContentLoaded', function () {
         w: bbox.width,
         h: bbox.height
       });
+    });
+  });
+
+  // Ensure hovered label and point are always on top in SVG stacking order
+  document.querySelectorAll('.radar-skill-label').forEach(label => {
+    label.addEventListener('mouseenter', function() {
+      const point = this.closest('.radar-skill-point');
+      if (point && point.parentNode) {
+        // Move to end, brings to top
+        point.parentNode.appendChild(point); 
+      }
     });
   });
 });

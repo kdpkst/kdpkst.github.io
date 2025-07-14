@@ -281,8 +281,6 @@
     margin-bottom: 0.5rem;
     margin-top: 1.2rem;
     text-align: center;
-    pointer-events: none;
-    user-select: none;
   }
   // Radar SVG
   .radar-svg {
@@ -295,60 +293,82 @@
   .radar-svg .radar-bg {
     fill: rgba(24,24,26,0.5);
   }
+
+  // Outermost ring (r=140)
+  .radar-svg .radar-ring:nth-of-type(2) {
+    stroke-width: 1.5;
+    opacity: 0.95;
+  }
   .radar-svg .radar-ring {
     fill: none;
-    stroke: #bfffff;
-  }
-  .radar-svg .radar-ring:nth-of-type(2) {
-    stroke-width: 2;
+    stroke: #39ff14;
+    stroke-width: 0.8;
     opacity: 0.7;
   }
-  .radar-svg .radar-ring:nth-of-type(3) {
-    stroke-width: 1.75;
-    opacity: 0.55;
-  }
-  .radar-svg .radar-ring:nth-of-type(4) {
-    stroke-width: 1.5;
-    opacity: 0.35;
-  }
   .radar-svg .radar-cross {
-    stroke: #bfffff;
-    stroke-width: 2.2;
+    stroke: #39ff14;
+    stroke-width: 1.1;
     opacity: 0.5;
+    filter: drop-shadow(0 0 4px #39ff14cc);
   }
-  .radar-svg .radar-cross:nth-of-type(7),
-  .radar-svg .radar-cross:nth-of-type(8) {
-    opacity: 0.28;
+  .radar-sweep-fan {
+    fill: url(#radar-fan-gradient);
+    opacity: 0.7;
   }
-
+  .radar-sweep-line {
+    stroke: #39ff14;
+    stroke-width: 2.5;
+    opacity: 0.85;
+    filter: drop-shadow(0 0 8px #39ff14cc);
+  }
+  
   .radar-skill-point circle {
-    filter: drop-shadow(0 0 8px #00ffe7cc);
-    transition: filter 0.2s;
-    cursor: pointer;
     stroke: #18181a;
     stroke-width: 2px;
   }
+  @keyframes radar-blink {
+    0%   { opacity: 1; }
+    49%  { opacity: 1; }
+    50%  { opacity: 0; }
+    99%  { opacity: 0; }
+    100% { opacity: 1; }
+  }
   .radar-skill-point:hover circle {
-    filter: drop-shadow(0 0 18px #b8ec68cc) brightness(1.3);
+    animation: radar-blink 0.8s steps(1, end) infinite;
+    fill: #ff0000;
   }
 
   .radar-skill-label {
-    font-family: 'Orbitron', 'Montserrat', 'Fira Sans', sans-serif;
-    font-size: 0.95rem;
-    fill: #b8ec68;
-    paint-order: stroke fill;
+    fill: #fff;
     stroke: #18181a;
     stroke-width: 2.5px;
-    stroke-linejoin: round;
-    pointer-events: none;
-    user-select: none;
+    font-family: 'Orbitron', 'Montserrat', 'Fira Sans', sans-serif;
+    font-size: 0.95rem;
+    paint-order: stroke fill;
     text-shadow: 0 2px 8px #232336cc;
+    user-select: none;
+  }
+  @keyframes radar-label-pulse {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.18); }
+    100% { transform: scale(1); }
+  }
+  .radar-skill-label:hover {
+    font-size: 1.1em;
+    cursor: pointer;
+    fill: #ff0000;
   }
 
   .radar-svg line {
     stroke-linecap: round;
     filter: drop-shadow(0 0 6px #00ffe7cc);
   }
+
+  // .radar-svg .radar-sweep {
+  //   fill: rgba(57,255,20,0.18);
+  //   filter: drop-shadow(0 0 16px #39ff14cc);
+  //   transform-origin: 50% 50%;
+  // }
 
   // bottom part of About section
   .explore-links {
