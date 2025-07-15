@@ -464,15 +464,22 @@
       top: 50%;
       transform: translate(-50%, 0);
       width: 90%;
-      font-size: 1.08rem;
+      font-size: 1.1rem;
       color: #e0e0e0;
       text-align: center;
-      font-weight: 500;
-      letter-spacing: 1px;
+      font-family: 'Montserrat', 'Fira Sans', 'Orbitron', Arial, sans-serif;
+      font-weight: 600;
+      letter-spacing: 1.2px;
       z-index: 21;
       opacity: 0;
       transition: opacity 0.3s 0.1s;
       pointer-events: none;
+      text-shadow:
+        0 2px 8px #232336cc,
+        0 0 8px #00ffaa55;
+      background: linear-gradient(90deg, #00ffaa 0%, #5c67ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .subtitle {
