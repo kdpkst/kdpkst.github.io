@@ -260,7 +260,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    margin: 0 auto 1rem auto;
+    margin: 0 auto 0rem auto;
     padding: 0;
     position: relative;
     overflow: visible;
@@ -365,11 +365,13 @@
   }
 
   // bottom part of About section
+  .about-section.explore {
+    margin-bottom: 2rem;
+  }
   .explore-title {
     font-size: 1.65rem;
     margin-bottom: 1.75rem;
   }
-  
   .explore-links {
     display: flex;
     justify-content: center;
