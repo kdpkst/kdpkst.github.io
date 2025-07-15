@@ -367,7 +367,7 @@
   // bottom part of About section
   .explore-title {
     font-size: 1.65rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.75rem;
   }
   
   .explore-links {
@@ -426,7 +426,7 @@
       color: rgba(255, 255, 255, 0.7);
       text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     }
-
+    
     .title {
       opacity: 0;
       transition: 300ms ease-in-out;
@@ -444,6 +444,35 @@
       text-shadow:
         0 0 10px rgba(92, 103, 255, 0.5),
         0 0 20px rgba(92, 103, 255, 0.3);
+    }
+
+    .tr-1:hover ~ #card .card-hover-desc,
+    .tr-2:hover ~ #card .card-hover-desc,
+    .tr-3:hover ~ #card .card-hover-desc,
+    .tr-4:hover ~ #card .card-hover-desc,
+    .tr-5:hover ~ #card .card-hover-desc,
+    .tr-6:hover ~ #card .card-hover-desc,
+    .tr-7:hover ~ #card .card-hover-desc,
+    .tr-8:hover ~ #card .card-hover-desc,
+    .tr-9:hover ~ #card .card-hover-desc {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .card-hover-desc {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, 0);
+      width: 90%;
+      font-size: 1.08rem;
+      color: #e0e0e0;
+      text-align: center;
+      font-weight: 500;
+      letter-spacing: 1px;
+      z-index: 21;
+      opacity: 0;
+      transition: opacity 0.3s 0.1s;
+      pointer-events: none;
     }
 
     .subtitle {
@@ -1022,7 +1051,6 @@
       }
     }
 
-    /* Modyfikacja istniejących styli */
     #card:hover .card-glare {
       opacity: 1;
     }
@@ -1037,43 +1065,4 @@
     }
 
   }
-
-
-}
-
-.title, .card-hover-desc {
-  opacity: 0;
-  transition: opacity 0.3s 0.1s;
-  pointer-events: none;
-}
-
-// .tr-1:hover ~ #card .title,
-// .tr-2:hover ~ #card .title,
-// .tr-3:hover ~ #card .title,
-// .tr-4:hover ~ #card .title,
-// .tr-5:hover ~ #card .title,
-.tr-1:hover ~ #card .card-hover-desc,
-.tr-2:hover ~ #card .card-hover-desc,
-.tr-3:hover ~ #card .card-hover-desc,
-.tr-4:hover ~ #card .card-hover-desc,
-.tr-5:hover ~ #card .card-hover-desc,
-.tr-6:hover ~ #card .card-hover-desc,
-.tr-7:hover ~ #card .card-hover-desc,
-.tr-8:hover ~ #card .card-hover-desc,
-.tr-9:hover ~ #card .card-hover-desc {
-  opacity: 1;
-  pointer-events: auto;
-}
-.card-hover-desc {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, 0);
-  width: 90%;
-  font-size: 1.08rem;
-  color: #e0e0e0;
-  text-align: center;
-  font-weight: 500;
-  letter-spacing: 1px;
-  z-index: 21;
 }
