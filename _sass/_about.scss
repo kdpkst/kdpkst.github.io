@@ -260,7 +260,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    margin: 0 auto 2.5rem auto;
+    margin: 0 auto 1rem auto;
     padding: 0;
     position: relative;
     overflow: visible;
@@ -278,7 +278,7 @@
     text-shadow: 0 0 12px #00ffe7cc, 0 2px 8px #232336cc;
     font-weight: 900;
     letter-spacing: 2px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     margin-top: 1.2rem;
     text-align: center;
   }
@@ -364,13 +364,12 @@
     filter: drop-shadow(0 0 6px #00ffe7cc);
   }
 
-  // .radar-svg .radar-sweep {
-  //   fill: rgba(57,255,20,0.18);
-  //   filter: drop-shadow(0 0 16px #39ff14cc);
-  //   transform-origin: 50% 50%;
-  // }
-
   // bottom part of About section
+  .explore-title {
+    font-size: 1.65rem;
+    margin-bottom: 1.5rem;
+  }
+  
   .explore-links {
     display: flex;
     justify-content: center;
@@ -418,4 +417,5 @@
       color: #ccc;
     }
   }
+
 }
