@@ -1,3 +1,4 @@
+// switching animation for the two navigation arrows on the webpage
 document.addEventListener('DOMContentLoaded', function() {
   var base = window.siteBaseUrl || '';
   var pages = window.pages || [
