@@ -443,38 +443,6 @@ main::before {
 }
 
 
-/* default common effects for projects and blogs */
-.project-list, .blog-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-}
-.project-card, .blog-card {
-  background: #232336;
-  border: 2px solid #00ffe7;
-  border-radius: 1rem;
-  padding: 1.2rem;
-  transition: background 0.2s, border 0.2s, transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 0 12px #00ffe7a0;
-}
-.project-card h2, .blog-card h2 {
-  margin-top: 0;
-  color: #00ffe7;
-  text-shadow: 0 0 8px #00ffe7, 0 0 16px #ff00c8;
-  position: relative;
-  z-index: 1;
-}
-.project-card a, .blog-card a {
-  color: #00ffe7;
-  text-decoration: underline;
-}
-.project-card:hover, .blog-card:hover {
-  transform: translateY(-8px) scale(1.03) rotate(-1deg);
-  box-shadow: 0 0 32px #00ffe7cc, 0 0 48px #ff00c8cc;
-  border-color: #ff00c8;
-}
-
-
 @media (max-width: 700px) {
   main {
     max-width: 98vw;
