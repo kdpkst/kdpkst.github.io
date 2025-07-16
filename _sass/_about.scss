@@ -114,6 +114,7 @@
     font-style: italic;
     opacity: 0.98;
     margin-bottom: 0.2em;
+    z-index: 10;
     p {
       margin: 0.25em 0 0.25em 0;
       word-break: break-word;
@@ -372,7 +373,8 @@
   .explore-title {
     font-family: 'Manufacturing Consent', 'Montserrat', 'Fira Sans', Arial, sans-serif;
     font-weight: 900;
-    font-size: clamp(1.5rem, 3vw, 2.6rem);
+    // font-size: clamp(1.5rem, 3vw, 3rem);
+    font-size: 2.5rem;
     margin-bottom: clamp(1rem, 2vw, 1.75rem);
     letter-spacing: 0.12em;
     background: linear-gradient(90deg, #00fff7 0%, #a259ff 60%, #ff00c8 100%);
@@ -383,6 +385,7 @@
     text-align: center;
     position: relative;
     z-index: 1;
+    filter: drop-shadow(0 0 0.6px #00fff7) drop-shadow(0 0 0.3px #a259ff) drop-shadow(0 0 0.15px #ff00c8);
   }
   .explore-links {
     display: flex;

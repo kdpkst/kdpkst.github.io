@@ -1,2 +1,2 @@
-1. add 3D effects for explore-title
-2. when a user hovers over upper half of the card, it will have 3D effects. but when a user hovers over lower half of the card, there is no symmetric effects. so add such effects
+1. when a user hovers over upper half of the card, it will have 3D effects. but when a user hovers over lower half of the card, there is no symmetric effects. so add such effects
+2. add animation when navigation to "projects" or "blogs"
