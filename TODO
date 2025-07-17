@@ -1,1 +1,7 @@
-in this branch, only modify Projects section (mainly include but not limited to: projects.html, projects.md, projects.yml, _projects.scss) with all other settings unchanged. Improve this section as described as below:
+in this branch, only modify Projects section (mainly include but not limited to: projects.html, projects.md, projects.yml, _projects.scss) with all other sections unchanged (modify other section's codes as less as possible. Adding new files are fine). Improve this section as described as below:
+1. ensure all the design align with the overall style of the website (cyberpunk plus hacker style)
+2. this section should be divided into two subsections: one subsection for work projects and the other one for side/personal projects 
+3. each project should be clickable, showing a detailed project page when a user clicks it
+4. each project card should contain: image of the project, project title, tags (e.g., a Spring Boot project may have tags spring, java, mysql, and etc.), project description, links to the project (show or hide certain elements like "Live Demo", "Source Code" or "published paper", based on whether they exist for this specific project)
+5. the layout for each project card: from the top to bottom, first is the image of project, then project title, then tags, then project description, then single link/several links (or maybe no links) to the project. Ensure each project card has exactly the same size. 
+6. add a search bar at the top of this section, ensuring users can search for specific projects
