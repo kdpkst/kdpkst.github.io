@@ -1,6 +1,46 @@
-- title: "Compound Interest Calculator"
-  description: "Fully AI-generated compound interest calculator developed by React, TypeScript, and Tailwind CSS"
-  url: "https://ci-caculator.netlify.app/"
-- title: "Pet Grooming Salon Appointment System"
-  description: "Web-based appointment system where customers can make appointment with the pet grooming salon"
-  url: "https://github.com/humb1e1989/Pet-Shop-Grooming-Appointment-System-"
+work_projects:
+  - title: "Compound Interest Calculator"
+    description: "Fully AI-generated compound interest calculator developed by React, TypeScript, and Tailwind CSS. Features real-time calculations, responsive design, and modern UI/UX."
+    image: "/assets/images/projects/placeholder.svg"
+    tags: ["React", "TypeScript", "Tailwind CSS", "AI-Generated"]
+    live_demo: "https://ci-caculator.netlify.app/"
+    source_code: "https://github.com/username/compound-interest-calculator"
+    published_paper: null
+    category: "work"
+    
+  - title: "Pet Grooming Salon Appointment System"
+    description: "Web-based appointment system where customers can make appointments with the pet grooming salon. Includes user authentication, booking management, and admin dashboard."
+    image: "/assets/images/projects/placeholder.svg"
+    tags: ["Spring Boot", "Java", "MySQL", "Bootstrap", "JavaScript"]
+    live_demo: null
+    source_code: "https://github.com/humb1e1989/Pet-Shop-Grooming-Appointment-System-"
+    published_paper: null
+    category: "work"
+
+personal_projects:
+  - title: "Personal Portfolio Website"
+    description: "A cyberpunk-themed personal portfolio website built with Jekyll, featuring dynamic animations, responsive design, and modern web technologies."
+    image: "/assets/images/projects/placeholder.svg"
+    tags: ["Jekyll", "SCSS", "JavaScript", "HTML5", "CSS3"]
+    live_demo: "https://kdpkst.github.io"
+    source_code: "https://github.com/kdpkst/kdpkst.github.io"
+    published_paper: null
+    category: "personal"
+    
+  - title: "Weather Dashboard"
+    description: "Real-time weather dashboard with location-based forecasts, interactive maps, and historical data visualization."
+    image: "/assets/images/projects/placeholder.svg"
+    tags: ["Vue.js", "Node.js", "OpenWeather API", "Chart.js", "Express"]
+    live_demo: "https://weather-dashboard-demo.netlify.app"
+    source_code: "https://github.com/username/weather-dashboard"
+    published_paper: null
+    category: "personal"
+    
+  - title: "Machine Learning Research Paper"
+    description: "Research on novel approaches to neural network optimization using evolutionary algorithms and adaptive learning rates."
+    image: "/assets/images/projects/ml-research.webp"
+    tags: ["Python", "TensorFlow", "Machine Learning", "Research", "Neural Networks"]
+    live_demo: null
+    source_code: "https://github.com/username/ml-research"
+    published_paper: "https://arxiv.org/abs/2024.12345"
+    category: "personal"
