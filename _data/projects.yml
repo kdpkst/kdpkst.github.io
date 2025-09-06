@@ -21,7 +21,7 @@ personal_projects:
 
   - title: "MonitorMate"
     description: "A data monitoring dashboard integrating fragmented, dispersed, and regionally restricted information into one platform."
-    image: "/assets/images/projects/placeholder.svg"
+    image: "/assets/images/projects/monitormate.png"
     tags: ["React/Next.js", "TypeScript", "Node.js", "MongoDB"]
     live_demo: null
     source_code: null
@@ -29,7 +29,7 @@ personal_projects:
     category: "personal"
 
   - title: "Advanced Amun Honeypot"
-    description: "Advanced Amum addressed original Amun's limited interaction capability with cyber attackers by introducing an advanced functionality of reverse shell spoofing for two specific vulnerabilities."
+    description: "Advanced Amum honeypot enhanced original Amun's limited interaction capability with cyber attackers by introducing an advanced functionality of reverse shell spoofing for two specific vulnerabilities."
     image: "/assets/images/projects/advanced_amun.png"
     tags: ["Honeypot", "Python", "Reverse Shell", "Docker", "Metasploit", "cybersecurity research"]
     live_demo: null
@@ -39,7 +39,7 @@ personal_projects:
 
   - title: "Still Not Aware of the Loophole of Unintentional Access to Docker? A Proof of Concept"
     description: "Mitigated a Docker port mapping vulnerability that unintentionally exposed containers to public access by an IPTABLES-based approach. Published results as 4th author."
-    image: "/assets/images/projects/placeholder.svg"
+    image: "/assets/images/projects/docker_iptables.png"
     tags: ["Docker Vulnerability", "cybersecurity research"]
     live_demo: null
     source_code: null
