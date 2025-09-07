@@ -216,27 +216,6 @@
     100% { transform: scale(1) rotate(0deg); filter: brightness(1); }
   }
 
-  @media (max-width: 700px) {
-    .about-section.hero {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1.2em;
-    }
-    .hero-left {
-      margin-right: 0;
-      width: 100%;
-    }
-    .hero-right {
-      margin-top: 1.2em;
-      left: 0;
-    }
-    .image-glow::before { width: 8em; height: 8em; }
-    .self-portrait { width: 6em; height: 6em; }
-    .image-glow {
-      left: 0;
-    }
-  }
-
   // middle part of About section
   .section-title {
     text-align: center;
@@ -267,12 +246,7 @@
     position: relative;
     overflow: visible;
   }
-  // Responsive for small screens
-  @media (max-width: 600px) {
-    .radar-skill-card {
-      max-width: 98vw;
-    }
-  }
+
   .radar-title {
     font-family: 'Orbitron', 'Montserrat', 'Fira Sans', sans-serif;
     font-size: 1.18rem;
@@ -1091,5 +1065,36 @@
       border-color: rgba(92, 103, 255, 0.8);
       box-shadow: 0 0 clamp(0.3rem, 1vw, 0.7rem) rgb(71, 83, 255);
     }
+  }
+
+  @media (max-width: 800px) {
+    .about-section.hero {
+      /* Reflow as a single-column grid so we can place the image between banner and intro */
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "greeting"
+        "image"
+        "intro"
+        "contacts";
+      align-items: center;
+      justify-items: center;
+      gap: 0.8rem;
+    }
+    /* Make children of hero-left participate in the parent grid */
+    .hero-left { display: contents; }
+    .greeting-banner { grid-area: greeting; width: 100%; text-align: center; margin-bottom: 0.1rem; }
+    .about-intro { grid-area: intro; width: 100%; }
+    .contact-links { grid-area: contacts; }
+    .hero-right { grid-area: image; width: 100%; display: flex; justify-content: center; margin-bottom: 0.5rem; }
+    .image-glow { left: 0; margin: 0 auto; }
+    .image-glow::before { width: clamp(6.5rem, 26vw, 8rem); height: clamp(6.5rem, 26vw, 8rem); }
+    .self-portrait { width: clamp(6.5rem, 35vw, 12.5rem); height: clamp(6.5rem, 35vw, 12.5rem); }
+    .greeting-banner { font-size: clamp(0.95rem, 4.2vw, 1.2rem); padding: 0.5em 1em; text-align: center; }
+    .about-intro { font-size: clamp(0.95rem, 3.8vw, 1.1rem); line-height: 1.6; text-align: left; }
+    .about-intro p { margin: 0.3em 0; }
+    .contact-links { justify-content: center; gap: 0.6em; }
+    .contact-links .contact-link { padding: 0.4em 0.9em; font-size: 0.95em; }
+    .contact-links .contact-link .icon { width: 18px; height: 18px; }
   }
 }
