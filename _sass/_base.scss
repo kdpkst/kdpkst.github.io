@@ -443,7 +443,7 @@ main::before {
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   main {
     max-width: 98vw;
     padding: 1rem;
@@ -460,8 +460,8 @@ main::before {
     align-items: center;
   }
   .nav-center {
-    gap: 1.1rem;
-    flex-wrap: wrap;
+    gap: 0.6rem; /* tighter spacing so 3 items fit in one row on 360px */
+    flex-wrap: nowrap; /* keep About/Projects/Blogs on one line */
     grid-area: center;
     justify-content: center;
   }
@@ -469,8 +469,9 @@ main::before {
   .nav-bg-right { grid-area: right; justify-content: flex-end; justify-self: end; align-items: center; }
   /* Make primary nav titles large and obvious on mobile */
   .nav-center a {
-    font-size: clamp(1.2rem, 5vw, 1.6rem);
-    letter-spacing: 0.06em;
+    font-size: clamp(1.05rem, 4.2vw, 1.35rem); /* slightly smaller on small screens */
+    letter-spacing: 0.04em;
+    padding: 0.1em 0.2em; /* slimmer tap target to prevent wrapping */
   }
   .bg-nav-btn {
     font-size: 0.75rem;
@@ -485,4 +486,18 @@ main::before {
     width: 10px;
     height: 10px;
   }
+
+  /* Smaller section navigation buttons on mobile */
+  .section-nav-btn {
+    width: 2.6rem;
+    height: 2.6rem;
+    font-size: 1.1rem;
+    box-shadow: 0 0 10px #00ffe7, 0 0 16px #ff00c8;
+  }
+  .section-nav-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+  #section-prev { left: 0.6rem; }
+  #section-next { right: 0.6rem; }
 }
