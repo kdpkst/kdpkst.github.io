@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Search function
   function performSearch(searchTerm) {
     const term = searchTerm.toLowerCase().trim();
+    const trimmedSearch = searchTerm.trim();
     let hasResults = false;
     let visibleSections = new Set();
     
@@ -103,11 +104,11 @@ document.addEventListener('DOMContentLoaded', function() {
         visibleSections.add(card.closest('.projects-section'));
         
         // Add highlighting to matching text
-        highlightText(titleElement, searchTerm);
-        highlightText(descriptionElement, searchTerm);
+        highlightText(titleElement, trimmedSearch);
+        highlightText(descriptionElement, trimmedSearch);
         tagElements.forEach(tag => {
           if (tag.textContent.toLowerCase().includes(term)) {
-            highlightText(tag, searchTerm);
+            highlightText(tag, trimmedSearch);
           }
         });
         
