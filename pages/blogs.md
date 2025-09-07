@@ -5,7 +5,7 @@ permalink: /blogs/
 ---
 
 <section class="blogs">
-  <h1>Blogs</h1>
+  <h1>Blogs (still in development)</h1>
   <input type="text" id="blog-search" placeholder="Search blogs...">
   <div class="blog-list">
     {% for post in site.posts %}
