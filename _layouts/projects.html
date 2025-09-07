@@ -16,6 +16,7 @@ layout: default
     </div>
   
     <!-- Work Projects Section -->
+    {% if site.data.projects.work_projects.size > 0 %}
     <div class="projects-section">
       <h2 class="section-title work-title">Work Projects</h2>
       <div class="project-grid" id="work-projects">
@@ -71,8 +72,10 @@ layout: default
         {% endfor %}
       </div>
     </div>
+    {% endif %}
   
     <!-- Personal Projects Section -->
+    {% if site.data.projects.personal_projects.size > 0 %}
     <div class="projects-section">
       <h2 class="section-title personal-title">Personal & Academic Projects</h2>
       <div class="project-grid" id="personal-projects">
@@ -128,6 +131,7 @@ layout: default
         {% endfor %}
       </div>
     </div>
+    {% endif %}
   
     <!-- No Results Message -->
     <div id="no-results" class="no-results" style="display: none;">
