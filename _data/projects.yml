@@ -48,7 +48,7 @@ personal_projects:
 
   - title: "Investigation and Countermeasure toward Unintentional Access to Docker Container"
     description: "Mitigated a Docker port mapping vulnerability that unintentionally exposed containers to public access by an SDN-based solution. Published results as 4th author."
-    image: "/assets/images/projects/placeholder.svg"
+    image: "/assets/images/projects/placeholder.jpg"
     tags: ["Docker Vulnerability", "cybersecurity research"]
     live_demo: null
     source_code: null
@@ -57,7 +57,7 @@ personal_projects:
     
   - title: "Pet Grooming Salon Appointment System"
     description: "Web-based appointment system where customers can make appointments with the pet grooming salon. Includes user authentication, booking management, and admin dashboard."
-    image: "/assets/images/projects/placeholder.svg"
+    image: "/assets/images/projects/placeholder.jpg"
     tags: ["Spring Boot", "Java", "MySQL", "Maven", "Thymeleaf", "HTML", "CSS", "JavaScript"]
     live_demo: null
     source_code: "https://github.com/humb1e1989/Pet-Shop-Grooming-Appointment-System-"
