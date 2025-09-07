@@ -449,14 +449,40 @@ main::before {
     padding: 1rem;
   }
   .navbar {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "left right"
+      "center center";
     padding: 1rem 0.5rem;
+    row-gap: 0.5rem;
+    column-gap: 0.6rem;
+    align-items: center;
   }
   .nav-center {
-    gap: 1rem;
+    gap: 1.1rem;
+    flex-wrap: wrap;
+    grid-area: center;
+    justify-content: center;
+  }
+  .nav-bg-left { grid-area: left; justify-content: flex-start; justify-self: start; align-items: center; }
+  .nav-bg-right { grid-area: right; justify-content: flex-end; justify-self: end; align-items: center; }
+  /* Make primary nav titles large and obvious on mobile */
+  .nav-center a {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+    letter-spacing: 0.06em;
   }
   .bg-nav-btn {
-    font-size: 0.85rem;
-    padding: 0.3rem 0.7rem;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    min-width: unset;
+    gap: 0.3rem;
+    border-width: 1px;
+    box-shadow: none;
+    background: rgba(20, 20, 30, 0.55);
+  }
+  .bg-nav-btn svg {
+    width: 10px;
+    height: 10px;
   }
 }
