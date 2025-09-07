@@ -82,7 +82,7 @@
 
 // Projects Sections
 .projects-section {
-  // margin-bottom: clamp(4rem, 8vw, 6rem);
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
 }
 
 .section-title {
@@ -91,19 +91,6 @@
   font-weight: 600;
   margin-bottom: clamp(2rem, 4vw, 3rem);
   text-align: center;
-  position: relative;
-  
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #00ffe7, #ff00c8, #00ffe7, transparent);
-    border-radius: 2px;
-  }
 }
 
 .work-title {
