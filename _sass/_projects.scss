@@ -86,28 +86,28 @@
 
 // Search highlight effect
 .search-highlight {
-  background: rgba(255, 165, 0, 0.92); /* bright orange */
+  background: #ff8a00; 
   color: #121212; /* dark text for contrast */
   border-radius: 2px;
   font-weight: 700;
   text-shadow: none;
   outline: none;
-  box-shadow: none; /* remove outer ring to reduce visual separation */
+  box-shadow: none;
   animation: highlight-pulse 0.4s ease-in-out;
-  display: inline; /* ensure it hugs the text precisely */
+  display: inline; 
 }
 
 @keyframes highlight-pulse {
   0% {
-    background: rgba(255, 165, 0, 0.75);
+    background: rgba(255, 138, 0, 0.9);
     transform: scale(1);
   }
   50% {
-    background: rgba(255, 165, 0, 1);
+    background: rgba(255, 138, 0, 1);
     transform: scale(1.04);
   }
   100% {
-    background: rgba(255, 165, 0, 0.92);
+    background: rgba(255, 138, 0, 0.98);
     transform: scale(1);
   }
 }
