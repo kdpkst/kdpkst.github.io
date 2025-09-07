@@ -67,9 +67,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Keyboard navigation for background
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'b' || e.key === 'B') {
+    if (e.key === 'ArrowLeft') {
       changeBackground('prev');
-    } else if (e.key === 'n' || e.key === 'N') {
+    } else if (e.key === 'ArrowRight') {
       changeBackground('next');
     }
   });

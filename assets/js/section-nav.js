@@ -37,13 +37,5 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('section-next').addEventListener('click', function() {
     navigatePage('next');
   });
-
-  // Keyboard navigation for pages
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'ArrowLeft') {
-      navigatePage('prev');
-    } else if (e.key === 'ArrowRight') {
-      navigatePage('next');
-    }
-  });
+  
 }); 

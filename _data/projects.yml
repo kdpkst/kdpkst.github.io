@@ -1,6 +1,66 @@
-- title: "Compound Interest Calculator"
-  description: "Fully AI-generated compound interest calculator developed by React, TypeScript, and Tailwind CSS"
-  url: "https://ci-caculator.netlify.app/"
-- title: "Pet Grooming Salon Appointment System"
-  description: "Web-based appointment system where customers can make appointment with the pet grooming salon"
-  url: "https://github.com/humb1e1989/Pet-Shop-Grooming-Appointment-System-"
+work_projects:
+
+
+personal_projects:
+  - title: "Personal Website"
+    description: "A cyberpunk-themed personal website built with Jekyll."
+    image: "/assets/images/projects/personal_web.webp"
+    tags: ["Jekyll", "SCSS", "JavaScript", "HTML5", "CSS3"]
+    live_demo: "https://kdpkst.github.io"
+    source_code: "https://github.com/kdpkst/kdpkst.github.io"
+    published_paper: null
+    category: "personal"
+
+  - title: "Compound Interest Calculator"
+    description: "Fully AI-generated compound interest calculator that features real-time calculations, responsive design, and modern UI/UX."
+    image: "/assets/images/projects/compound_interest_calculator.png"
+    tags: ["React", "TypeScript", "Tailwind CSS", "Vibe Coding"]
+    live_demo: "https://ci-caculator.netlify.app/"
+    source_code: null
+    published_paper: null
+    category: "personal"
+
+  - title: "MonitorMate"
+    description: "A data monitoring dashboard integrating fragmented, dispersed, and regionally restricted information into one platform."
+    image: "/assets/images/projects/monitormate.png"
+    tags: ["React/Next.js", "TypeScript", "Node.js", "MongoDB"]
+    live_demo: null
+    source_code: null
+    published_paper: null
+    category: "personal"
+
+  - title: "Advanced Amun Honeypot"
+    description: "Advanced Amum honeypot enhanced original Amun's limited interaction capability with cyber attackers by introducing an advanced functionality of reverse shell spoofing for two specific vulnerabilities."
+    image: "/assets/images/projects/advanced_amun.png"
+    tags: ["Honeypot", "Python", "Reverse Shell", "Docker", "Metasploit", "cybersecurity research"]
+    live_demo: null
+    source_code: "https://github.com/kdpkst/advanced-amun"
+    published_paper: null
+    category: "personal"
+
+  - title: "Still Not Aware of the Loophole of Unintentional Access to Docker? A Proof of Concept"
+    description: "Mitigated a Docker port mapping vulnerability that unintentionally exposed containers to public access by an IPTABLES-based approach. Published results as 4th author."
+    image: "/assets/images/projects/docker_iptables.webp"
+    tags: ["Docker Vulnerability", "cybersecurity research"]
+    live_demo: null
+    source_code: null
+    published_paper: https://ieeexplore.ieee.org/document/10218166
+    category: "personal"
+
+  - title: "Investigation and Countermeasure toward Unintentional Access to Docker Container"
+    description: "Mitigated a Docker port mapping vulnerability that unintentionally exposed containers to public access by an SDN-based solution. Published results as 4th author."
+    image: "/assets/images/projects/docker_sdn.webp"
+    tags: ["Docker Vulnerability", "cybersecurity research"]
+    live_demo: null
+    source_code: null
+    published_paper: https://ieeexplore.ieee.org/document/10165201
+    category: "personal"
+    
+  - title: "Pet Grooming Salon Appointment System"
+    description: "Web-based appointment system where customers can make appointments with the pet grooming salon, which also includes an admin dashboard."
+    image: "/assets/images/projects/placeholder.jpg"
+    tags: ["Spring Boot", "Java", "MySQL", "Maven", "Thymeleaf", "HTML", "CSS", "JavaScript"]
+    live_demo: null
+    source_code: "https://github.com/humb1e1989/Pet-Shop-Grooming-Appointment-System-"
+    published_paper: null
+    category: "personal"

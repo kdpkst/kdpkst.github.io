@@ -1,22 +1,19 @@
+# Site-wide variables
 title: "Jax's Personal Website"
 description: "Personal website built with Jekyll."
+author: Jax
 baseurl: ""
-url: "https://yourusername.github.io"
+url: "https://kdpkst.github.io"
 
 collections:
+  projects:
+    output: true   # This tells Jekyll to generate actual HTML files for each project
+    permalink: /projects/:title/   # This sets the URL structure for your projects
   posts:
     output: true
+    permalink: /blogs/:categories/:year/:month/:day/:title/
 
-# Navigation
-nav:
-  - name: "About Me"
-    url: "/"
-  - name: "Projects"
-    url: "/projects"
-  - name: "Blogs"
-    url: "/blogs"
-
-# Markdown and plugins
+# Build settings 
 markdown: kramdown
 plugins:
   - jekyll-feed
