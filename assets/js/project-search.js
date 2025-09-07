@@ -24,17 +24,54 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   }
   
+  // Function to highlight matching text
+  function highlightText(element, searchTerm) {
+    if (!searchTerm) {
+      // Remove existing highlights
+      const highlights = element.querySelectorAll('.search-highlight');
+      highlights.forEach(highlight => {
+        highlight.outerHTML = highlight.textContent;
+      });
+      return;
+    }
+    
+    const text = element.textContent;
+    const regex = new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+    const highlightedText = text.replace(regex, '<span class="search-highlight">$1</span>');
+    
+    if (highlightedText !== text) {
+      element.innerHTML = highlightedText;
+    }
+  }
+  
+  // Function to remove highlights
+  function removeHighlights() {
+    const highlights = document.querySelectorAll('.search-highlight');
+    highlights.forEach(highlight => {
+      highlight.outerHTML = highlight.textContent;
+    });
+  }
+  
   // Search function
   function performSearch(searchTerm) {
     const term = searchTerm.toLowerCase().trim();
     let hasResults = false;
     let visibleSections = new Set();
     
-    // Reset all cards
+    // Reset all cards and remove highlights
     projectCards.forEach(card => {
       card.classList.remove('hidden');
       card.style.opacity = '1';
       card.style.transform = 'scale(1)';
+      
+      // Remove existing highlights
+      const title = card.querySelector('.project-title');
+      const description = card.querySelector('.project-description');
+      const tags = card.querySelectorAll('.tag');
+      
+      if (title) highlightText(title, '');
+      if (description) highlightText(description, '');
+      tags.forEach(tag => highlightText(tag, ''));
     });
     
     // If search term is empty, show all projects
@@ -49,8 +86,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Filter projects
     projectCards.forEach(card => {
-      const title = card.querySelector('.project-title').textContent.toLowerCase();
-      const description = card.querySelector('.project-description').textContent.toLowerCase();
+      const titleElement = card.querySelector('.project-title');
+      const descriptionElement = card.querySelector('.project-description');
+      const tagElements = card.querySelectorAll('.tag');
+      
+      const title = titleElement.textContent.toLowerCase();
+      const description = descriptionElement.textContent.toLowerCase();
       const tags = card.getAttribute('data-tags') || '';
       
       const matches = title.includes(term) || 
@@ -60,6 +101,15 @@ document.addEventListener('DOMContentLoaded', function() {
       if (matches) {
         hasResults = true;
         visibleSections.add(card.closest('.projects-section'));
+        
+        // Add highlighting to matching text
+        highlightText(titleElement, searchTerm);
+        highlightText(descriptionElement, searchTerm);
+        tagElements.forEach(tag => {
+          if (tag.textContent.toLowerCase().includes(term)) {
+            highlightText(tag, searchTerm);
+          }
+        });
         
         // Add subtle animation for matching cards
         card.style.opacity = '1';

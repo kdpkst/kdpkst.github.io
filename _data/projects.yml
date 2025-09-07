@@ -2,15 +2,6 @@ work_projects:
 
 
 personal_projects:
-  - title: "Personal Website"
-    description: "A cyberpunk-themed personal website built with Jekyll."
-    image: "/assets/images/projects/personal_web.webp"
-    tags: ["Jekyll", "SCSS", "JavaScript", "HTML5", "CSS3"]
-    live_demo: "https://kdpkst.github.io"
-    source_code: "https://github.com/kdpkst/kdpkst.github.io"
-    published_paper: null
-    category: "personal"
-
   - title: "MonitorMate"
     description: "A data monitoring dashboard integrating fragmented, dispersed, and regionally restricted information into one platform."
     image: "/assets/images/projects/monitormate.png"
@@ -53,6 +44,15 @@ personal_projects:
     tags: ["Spring Boot", "Java", "MySQL", "Maven", "Thymeleaf", "HTML", "CSS", "JavaScript"]
     live_demo: null
     source_code: "https://github.com/humb1e1989/Pet-Shop-Grooming-Appointment-System-"
+    published_paper: null
+    category: "personal"
+
+  - title: "Personal Website"
+    description: "A cyberpunk-themed personal website built with Jekyll."
+    image: "/assets/images/projects/personal_web.webp"
+    tags: ["Jekyll", "SCSS", "JavaScript", "HTML5", "CSS3"]
+    live_demo: "https://kdpkst.github.io"
+    source_code: "https://github.com/kdpkst/kdpkst.github.io"
     published_paper: null
     category: "personal"
 
