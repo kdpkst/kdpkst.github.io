@@ -88,13 +88,13 @@
 .search-highlight {
   background: rgba(255, 165, 0, 0.92); /* bright orange */
   color: #121212; /* dark text for contrast */
-  padding: 0.1rem 0.2rem;
-  border-radius: 3px;
+  border-radius: 2px;
   font-weight: 700;
   text-shadow: none;
-  outline: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.35);
-  animation: highlight-pulse 0.5s ease-in-out;
+  outline: none;
+  box-shadow: none; /* remove outer ring to reduce visual separation */
+  animation: highlight-pulse 0.4s ease-in-out;
+  display: inline; /* ensure it hugs the text precisely */
 }
 
 @keyframes highlight-pulse {
