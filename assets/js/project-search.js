@@ -52,12 +52,10 @@ document.addEventListener('DOMContentLoaded', function() {
       const title = card.querySelector('.project-title').textContent.toLowerCase();
       const description = card.querySelector('.project-description').textContent.toLowerCase();
       const tags = card.getAttribute('data-tags') || '';
-      const category = card.getAttribute('data-category') || '';
       
       const matches = title.includes(term) || 
                      description.includes(term) || 
-                     tags.includes(term) || 
-                     category.includes(term);
+                     tags.includes(term);
       
       if (matches) {
         hasResults = true;
