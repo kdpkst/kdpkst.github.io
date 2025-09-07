@@ -2,7 +2,7 @@ work_projects:
 
 personal_projects:
   - title: "Personal Website"
-    description: "A cyberpunk-themed personal portfolio website built with Jekyll."
+    description: "A cyberpunk-themed personal website built with Jekyll."
     image: "/assets/images/projects/personal_web.webp"
     tags: ["Jekyll", "SCSS", "JavaScript", "HTML5", "CSS3"]
     live_demo: "https://kdpkst.github.io"
@@ -11,7 +11,7 @@ personal_projects:
     category: "personal"
 
   - title: "Compound Interest Calculator"
-    description: "Fully AI-generated compound interest calculator. Features real-time calculations, responsive design, and modern UI/UX."
+    description: "Fully AI-generated compound interest calculator that features real-time calculations, responsive design, and modern UI/UX."
     image: "/assets/images/projects/compound_interest_calculator.png"
     tags: ["React", "TypeScript", "Tailwind CSS", "Vibe Coding"]
     live_demo: "https://ci-caculator.netlify.app/"
@@ -39,7 +39,7 @@ personal_projects:
 
   - title: "Still Not Aware of the Loophole of Unintentional Access to Docker? A Proof of Concept"
     description: "Mitigated a Docker port mapping vulnerability that unintentionally exposed containers to public access by an IPTABLES-based approach. Published results as 4th author."
-    image: "/assets/images/projects/docker_iptables.png"
+    image: "/assets/images/projects/docker_iptables.webp"
     tags: ["Docker Vulnerability", "cybersecurity research"]
     live_demo: null
     source_code: null
@@ -48,7 +48,7 @@ personal_projects:
 
   - title: "Investigation and Countermeasure toward Unintentional Access to Docker Container"
     description: "Mitigated a Docker port mapping vulnerability that unintentionally exposed containers to public access by an SDN-based solution. Published results as 4th author."
-    image: "/assets/images/projects/placeholder.jpg"
+    image: "/assets/images/projects/docker_sdn.webp"
     tags: ["Docker Vulnerability", "cybersecurity research"]
     live_demo: null
     source_code: null
@@ -56,7 +56,7 @@ personal_projects:
     category: "personal"
     
   - title: "Pet Grooming Salon Appointment System"
-    description: "Web-based appointment system where customers can make appointments with the pet grooming salon. Includes user authentication, booking management, and admin dashboard."
+    description: "Web-based appointment system where customers can make appointments with the pet grooming salon, which also includes an admin dashboard."
     image: "/assets/images/projects/placeholder.jpg"
     tags: ["Spring Boot", "Java", "MySQL", "Maven", "Thymeleaf", "HTML", "CSS", "JavaScript"]
     live_demo: null
