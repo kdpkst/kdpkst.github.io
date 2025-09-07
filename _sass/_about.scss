@@ -230,6 +230,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+    justify-content: center; 
+    justify-items: center;  
+    align-items: center;     
+    margin: 0 auto;         
   }
 
   // Technical Skills (Radar) Section
@@ -241,7 +245,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    margin: 0 auto 0rem auto;
+    margin: 0 auto;        
     padding: 0;
     position: relative;
     overflow: visible;
@@ -1093,8 +1097,8 @@
     .greeting-banner { font-size: clamp(0.95rem, 4.2vw, 1.2rem); padding: 0.5em 1em; text-align: center; }
     .about-intro { font-size: clamp(0.95rem, 3.8vw, 1.1rem); line-height: 1.6; text-align: left; }
     .about-intro p { margin: 0.3em 0; }
-    .contact-links { justify-content: center; gap: 0.6em; }
-    .contact-links .contact-link { padding: 0.4em 0.9em; font-size: 0.95em; }
+    .contact-links { justify-content: center; gap: 0.9rem 1.2rem; margin: 0.6rem 0 0.9rem; }
+    .contact-links .contact-link { padding: 0.4em 0.9em; font-size: 0.95em; margin: 0.1rem 0.2rem; }
     .contact-links .contact-link .icon { width: 18px; height: 18px; }
   }
 }
