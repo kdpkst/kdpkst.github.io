@@ -54,7 +54,8 @@
     transform: scale(1.02);
   }
   
-  &:hover {
+  &:hover,
+  &:active {
     border-color: #ff00c8;
     box-shadow: 
       0 0 25px rgba(255, 0, 200, 0.4),
@@ -178,7 +179,8 @@
     pointer-events: none;
   }
   
-  &:hover {
+  &:hover,
+  &:active {
     transform: translateY(-10px) scale(1.02) rotate(1deg);
     border-color: #ff00c8;
     box-shadow: 
@@ -259,7 +261,8 @@
     transition: transform 0.3s ease;
   }
   
-  &:hover {
+  &:hover,
+  &:active {
     background: rgba(0, 255, 231, 0.2);
     border-color: #ff00c8;
     color: #ff00c8;
@@ -271,21 +274,24 @@
     }
   }
   
-  &.demo-link:hover {
+  &.demo-link:hover,
+  &.demo-link:active {
     background: rgba(0, 255, 231, 0.2);
     border-color: #00ffe7;
     color: #00ffe7;
     box-shadow: 0 0 20px rgba(0, 255, 231, 0.4);
   }
   
-  &.code-link:hover {
+  &.code-link:hover,
+  &.code-link:active {
     background: rgba(255, 0, 200, 0.2);
     border-color: #ff00c8;
     color: #ff00c8;
     box-shadow: 0 0 20px rgba(255, 0, 200, 0.4);
   }
   
-  &.paper-link:hover {
+  &.paper-link:hover,
+  &.paper-link:active {
     background: rgba(255, 215, 0, 0.2);
     border-color: #ffd700;
     color: #ffd700;
@@ -332,7 +338,8 @@
   transition: all 0.3s ease;
   backdrop-filter: blur(5px);
   
-  &:hover {
+  &:hover,
+  &:active {
     background: rgba(255, 0, 200, 0.2);
     transform: scale(1.05);
     box-shadow: 0 0 10px rgba(255, 0, 200, 0.3);
@@ -372,6 +379,25 @@
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
   }
+}
+
+// Animations
+@keyframes cyberpunk-pulse {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+// Hidden class for search functionality
+.project-card.hidden {
+  display: none;
+}
+
+.projects-section.hidden {
+  display: none;
 }
 
 // Responsive Design
@@ -424,23 +450,4 @@
     padding: 0.2rem 0.6rem;
     font-size: 0.7rem;
   }
-}
-
-// Animations
-@keyframes cyberpunk-pulse {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-// Hidden class for search functionality
-.project-card.hidden {
-  display: none;
-}
-
-.projects-section.hidden {
-  display: none;
 }

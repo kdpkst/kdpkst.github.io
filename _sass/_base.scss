@@ -310,7 +310,8 @@ main::before {
   box-shadow: 0 0 16px #00ffe7;
   transition: background 0.2s, color 0.2s, border 0.2s;
 }
-#back-to-top:hover {
+#back-to-top:hover,
+#back-to-top:active {
   background: #ff00c8;
   color: #fff;
   border: 2px solid #ff00c8;
